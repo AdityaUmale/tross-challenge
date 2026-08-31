@@ -136,6 +136,7 @@ POST /v1/profiles     {"url": "URL"}
 | `url` | string | Required. A LinkedIn member profile URL. |
 | `fresh` | boolean | Bypass the cache and refetch from LinkedIn. Defaults to `false`. |
 | `raw` | boolean | Include the raw Voyager payload next to the parsed profile. Defaults to `false`. |
+| `extras` | boolean | Also fetch the top card and page the skills. Two or more extra upstream requests, which shortens session lifetime. Defaults to `false`. |
 
 The `url` parameter accepts full URLs, bare paths, and bare usernames. Regional
 hosts, locale prefixes, trailing slashes, and `?trk=` tracking parameters are
@@ -402,6 +403,29 @@ which is what the third case looks like until you inspect the `Set-Cookie`
 headers. Redirects are also confined to `linkedin.com`: every hop resends
 `li_at`, so an off-site `Location` would hand the session cookie to that host.
 
+### One request per profile
+
+The largest reliability problem in this service was self-inflicted, and it is
+worth stating plainly because the obvious diagnosis was wrong.
+
+Sessions kept dying after a handful of lookups, and the working theory was that
+LinkedIn blocks datacenter IP addresses. It does treat them with more suspicion
+— but that was not what was happening here. A single call to `/v1/profiles` was
+issuing **four** authenticated requests: an HTML page load to mint a session,
+the full-profile call, a top-card call, and one or more skills pages. Four
+identity-graph requests in about a second is a scrape signature regardless of
+where they come from.
+
+The full-profile decoration already carries every field this API returns. The
+extra calls existed for follower counts and endorsement counts, and this
+projection does not expose endorsements at all. Cutting the fan-out to one
+request, and supplying a real browser cookie jar so no bootstrap request is
+needed, was enough for the same session to serve profiles from a datacenter
+container without being invalidated.
+
+The extras are still available behind `?extras=true` for callers who want the
+top card and paged skills and accept the cost to session lifetime.
+
 ### The client fingerprint has to be self-consistent
 
 `x-li-track` announces a form factor, and it must agree with the `User-Agent`.
@@ -430,10 +454,14 @@ The client keeps the request pattern conservative:
   carries a name and nothing else, so `endorsementCount` is always `null`.
   Retrieving counts needs a separate endpoint that this service doesn't call.
 - **The cookie is the weak point.** `li_at` lasts weeks to months, but LinkedIn
-  invalidates it early if traffic looks automated — bursts of requests, or a
-  `User-Agent` that disagrees with the announced client. `/health` returns `503`
-  when this happens, so the failure is legible rather than a mystery. Refresh the
-  cookie and redeploy.
+  invalidates it early if traffic looks automated. `/health` returns `503` when
+  this happens, so the failure is legible rather than a mystery. Refresh the
+  cookie and redeploy. Two things keep a session alive in practice: one request
+  per profile, and not using the same cookie from a browser and this service at
+  the same time.
+- **Rate matters more than volume.** Steady, spaced requests are tolerated;
+  bursts are not. Concurrency is capped at 2 and responses are cached for 24
+  hours by default.
 - **Datacenter IP addresses attract more blocking.** Expect a higher HTTP 999
   rate from a hosted deployment than from a laptop. Warm the cache (see
   [Deploy](#deploy)) so a temporary block doesn't stop the service returning data.

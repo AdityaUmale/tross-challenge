@@ -495,6 +495,9 @@ curl 'localhost:8080/v1/profiles?url=https://www.linkedin.com/in/williamhgates' 
 
 ## Deploy
 
+For step-by-step Hugging Face Spaces instructions, see
+[deploy/HUGGINGFACE.md](deploy/HUGGINGFACE.md).
+
 Build and run the container:
 
 ```bash

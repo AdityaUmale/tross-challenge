@@ -43,7 +43,19 @@ export async function buildApp(config: Config): Promise<FastifyInstance> {
         description:
           'Accepts a LinkedIn profile URL and returns the profile as structured JSON.\n\n' +
           'Data is read from LinkedIn\'s internal Voyager API over plain HTTP requests. ' +
-          'There is no browser automation and no HTML scraping anywhere in the request path.',
+          'There is no browser automation and no HTML scraping anywhere in the request path.\n\n' +
+          '## Trying it out\n\n' +
+          '1. Click **Authorize** at the top right and paste the API key supplied with this submission. ' +
+          'Either field works — `bearerAuth` or `apiKey`.\n' +
+          '2. Open `GET /v1/profiles`, click **Try it out**, then **Execute**. ' +
+          'The `url` field is pre-filled with a real profile.\n' +
+          '3. Replace `url` with any LinkedIn member profile to fetch a different one.\n\n' +
+          '`GET /health` needs no key and reports whether the LinkedIn session is live.\n\n' +
+          '## Notes\n\n' +
+          '- Responses are cached for 24 hours. Add `fresh=true` to force a live fetch.\n' +
+          '- Sections a profile does not have come back as empty arrays. `meta.sections` ' +
+          'reports the outcome of each one, so an absent section is distinguishable from a failed read.\n' +
+          '- Company, school, job and post URLs are rejected with a 400 and an explanation.',
         version: '1.0.0',
       },
       components: {

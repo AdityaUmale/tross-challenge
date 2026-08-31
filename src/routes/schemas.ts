@@ -146,7 +146,13 @@ export const profileQuerystringSchema = {
   type: 'object',
   required: ['url'],
   properties: {
-    url: { type: 'string', minLength: 1, description: urlDescription, examples: ['https://www.linkedin.com/in/williamhgates'] },
+    url: {
+      type: 'string',
+      minLength: 1,
+      description: urlDescription,
+      // Pre-fills the "Try it out" box so the endpoint is one click to call.
+      default: 'https://www.linkedin.com/in/williamhgates',
+    },
     fresh: { type: 'boolean', default: false, description: 'Bypass the cache and refetch from LinkedIn.' },
     raw: { type: 'boolean', default: false, description: 'Include the raw Voyager payload alongside the parsed profile.' },
     extras: {

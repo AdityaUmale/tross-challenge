@@ -1,0 +1,24 @@
+{
+  "_comment": [
+    "Voyager endpoint identifiers, kept in config rather than code so they can be",
+    "refreshed from a new browser capture without a redeploy.",
+    "",
+    "Decoration IDs carry a version suffix (-101). LinkedIn bumps these when a",
+    "projection changes; a stale one usually 400s. `profileFallbacks` is tried in",
+    "order, so adding a newly captured version at the front is the whole fix.",
+    "",
+    "Refresh with: npm run har -- captures/your.har"
+  ],
+  "capturedAt": null,
+  "profile": "com.linkedin.voyager.dash.deco.identity.profile.FullProfileWithEntities-101",
+  "profileFallbacks": [
+    "com.linkedin.voyager.dash.deco.identity.profile.FullProfileWithEntities-100",
+    "com.linkedin.voyager.dash.deco.identity.profile.FullProfileWithEntities-99"
+  ],
+  "topCard": "com.linkedin.voyager.dash.deco.identity.profile.WebTopCardCore-16",
+  "topCardFallbacks": [
+    "com.linkedin.voyager.dash.deco.identity.profile.WebTopCardCore-15"
+  ],
+  "skillsPageSize": 50,
+  "maxSkills": 200
+}

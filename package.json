@@ -1,0 +1,31 @@
+{
+  "name": "linkedin-profile-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "har": "tsx tools/har-extract.ts",
+    "probe": "tsx tools/probe.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "warm": "tsx tools/warm.ts"
+  },
+  "dependencies": {
+    "@fastify/rate-limit": "^10.2.1",
+    "@fastify/swagger": "^9.4.0",
+    "@fastify/swagger-ui": "^5.2.0",
+    "fastify": "^5.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.8"
+  }
+}

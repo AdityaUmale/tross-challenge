@@ -1,0 +1,173 @@
+{
+  "_comment": "Hand-built payload mirroring the shape of /identity/dash/profiles with accept: application/vnd.linkedin.normalized+json+2.1. Real captures replace this; it exists so the graph resolver and parsers are testable before any credentials exist.",
+  "data": {
+    "$type": "com.linkedin.restli.common.CollectionResponse",
+    "*elements": ["urn:li:fsd_profile:ACoAAASYNTH1"],
+    "paging": { "count": 1, "start": 0, "total": 1 }
+  },
+  "included": [
+    {
+      "entityUrn": "urn:li:fsd_profile:ACoAAASYNTH1",
+      "$type": "com.linkedin.voyager.dash.identity.profile.Profile",
+      "firstName": "Ada",
+      "lastName": "Lovelace",
+      "headline": "Principal Engineer at Analytical Engines",
+      "summary": "Mathematician. I write about compilers and the people who maintain them.",
+      "publicIdentifier": "ada-lovelace-synthetic",
+      "geoLocationName": "London, England, United Kingdom",
+      "premium": true,
+      "influencer": false,
+      "profilePictureFrameType": "PHOTO_FRAME_TYPE_OPEN_TO_WORK",
+      "profilePicture": {
+        "displayImageReference": {
+          "vectorImage": {
+            "rootUrl": "https://media.licdn.com/dms/image/v2/SYNTH/",
+            "artifacts": [
+              { "width": 100, "height": 100, "fileIdentifyingUrlPathSegment": "shrink_100_100/photo.jpg" },
+              { "width": 800, "height": 800, "fileIdentifyingUrlPathSegment": "shrink_800_800/photo.jpg" },
+              { "width": 400, "height": 400, "fileIdentifyingUrlPathSegment": "shrink_400_400/photo.jpg" }
+            ]
+          }
+        }
+      },
+      "*profilePositionGroups": "urn:li:fsd_profile:ACoAAASYNTH1/positionGroups",
+      "*profileEducations": "urn:li:fsd_profile:ACoAAASYNTH1/educations",
+      "*profileSkills": "urn:li:fsd_profile:ACoAAASYNTH1/skills",
+      "*profileCertifications": "urn:li:fsd_profile:ACoAAASYNTH1/certifications",
+      "*profileLanguages": "urn:li:fsd_profile:ACoAAASYNTH1/languages",
+      "*profileHonors": "urn:li:fsd_profile:ACoAAASYNTH1/honors"
+    },
+
+    {
+      "entityUrn": "urn:li:fsd_profile:ACoAAASYNTH1/positionGroups",
+      "$type": "com.linkedin.restli.common.CollectionResponse",
+      "*elements": ["urn:li:fsd_profilePositionGroup:GRP1", "urn:li:fsd_profilePositionGroup:GRP2"]
+    },
+    {
+      "entityUrn": "urn:li:fsd_profilePositionGroup:GRP1",
+      "$type": "com.linkedin.voyager.dash.identity.profile.ProfilePositionGroup",
+      "companyName": "Analytical Engines",
+      "companyUrn": "urn:li:fsd_company:99001",
+      "*profilePositionInPositionGroup": "urn:li:fsd_profilePositionGroup:GRP1/positions"
+    },
+    {
+      "entityUrn": "urn:li:fsd_profilePositionGroup:GRP1/positions",
+      "$type": "com.linkedin.restli.common.CollectionResponse",
+      "*elements": ["urn:li:fsd_profilePosition:POS1", "urn:li:fsd_profilePosition:POS2"]
+    },
+    {
+      "entityUrn": "urn:li:fsd_profilePosition:POS1",
+      "$type": "com.linkedin.voyager.dash.identity.profile.ProfilePosition",
+      "title": "Principal Engineer",
+      "employmentType": "FULL_TIME",
+      "locationName": "London, United Kingdom",
+      "description": "Compiler correctness and developer tooling.",
+      "dateRange": { "start": { "month": 3, "year": 2022 } },
+      "*company": "urn:li:fsd_company:99001"
+    },
+    {
+      "entityUrn": "urn:li:fsd_profilePosition:POS2",
+      "$type": "com.linkedin.voyager.dash.identity.profile.ProfilePosition",
+      "title": "Senior Engineer",
+      "employmentType": "FULL_TIME",
+      "dateRange": { "start": { "month": 1, "year": 2019 }, "end": { "month": 2, "year": 2022 } },
+      "*company": "urn:li:fsd_company:99001"
+    },
+    {
+      "entityUrn": "urn:li:fsd_profilePositionGroup:GRP2",
+      "$type": "com.linkedin.voyager.dash.identity.profile.ProfilePositionGroup",
+      "companyName": "Difference Machines",
+      "companyUrn": "urn:li:fsd_company:99002",
+      "*profilePositionInPositionGroup": "urn:li:fsd_profilePositionGroup:GRP2/positions"
+    },
+    {
+      "entityUrn": "urn:li:fsd_profilePositionGroup:GRP2/positions",
+      "$type": "com.linkedin.restli.common.CollectionResponse",
+      "*elements": ["urn:li:fsd_profilePosition:POS3"]
+    },
+    {
+      "entityUrn": "urn:li:fsd_profilePosition:POS3",
+      "$type": "com.linkedin.voyager.dash.identity.profile.ProfilePosition",
+      "title": "Engineer",
+      "companyName": "Difference Machines",
+      "dateRange": { "start": { "year": 2016 }, "end": { "year": 2018 } }
+    },
+
+    {
+      "entityUrn": "urn:li:fsd_company:99001",
+      "$type": "com.linkedin.voyager.dash.organization.Company",
+      "name": "Analytical Engines",
+      "logo": {
+        "vectorImage": {
+          "rootUrl": "https://media.licdn.com/dms/image/v2/LOGO1/",
+          "artifacts": [{ "width": 200, "height": 200, "fileIdentifyingUrlPathSegment": "logo_200.png" }]
+        }
+      }
+    },
+
+    {
+      "entityUrn": "urn:li:fsd_profile:ACoAAASYNTH1/educations",
+      "$type": "com.linkedin.restli.common.CollectionResponse",
+      "*elements": ["urn:li:fsd_profileEducation:EDU1"]
+    },
+    {
+      "entityUrn": "urn:li:fsd_profileEducation:EDU1",
+      "$type": "com.linkedin.voyager.dash.identity.profile.ProfileEducation",
+      "schoolName": "University of London",
+      "degreeName": "BSc",
+      "fieldOfStudy": "Mathematics",
+      "grade": "First",
+      "dateRange": { "start": { "year": 2012 }, "end": { "year": 2016 } }
+    },
+
+    {
+      "entityUrn": "urn:li:fsd_profile:ACoAAASYNTH1/skills",
+      "$type": "com.linkedin.restli.common.CollectionResponse",
+      "*elements": ["urn:li:fsd_profileSkill:SK1", "urn:li:fsd_profileSkill:SK2"]
+    },
+    {
+      "entityUrn": "urn:li:fsd_profileSkill:SK1",
+      "$type": "com.linkedin.voyager.dash.identity.profile.ProfileSkill",
+      "name": "TypeScript",
+      "endorsementCount": 42
+    },
+    {
+      "entityUrn": "urn:li:fsd_profileSkill:SK2",
+      "$type": "com.linkedin.voyager.dash.identity.profile.ProfileSkill",
+      "name": "Compilers"
+    },
+
+    {
+      "entityUrn": "urn:li:fsd_profile:ACoAAASYNTH1/certifications",
+      "$type": "com.linkedin.restli.common.CollectionResponse",
+      "*elements": ["urn:li:fsd_profileCertification:CERT1"]
+    },
+    {
+      "entityUrn": "urn:li:fsd_profileCertification:CERT1",
+      "$type": "com.linkedin.voyager.dash.identity.profile.ProfileCertification",
+      "name": "AWS Solutions Architect",
+      "authority": "Amazon Web Services",
+      "licenseNumber": "ABC-123",
+      "url": "https://example.com/cert",
+      "dateRange": { "start": { "month": 1, "year": 2023 } }
+    },
+
+    {
+      "entityUrn": "urn:li:fsd_profile:ACoAAASYNTH1/languages",
+      "$type": "com.linkedin.restli.common.CollectionResponse",
+      "*elements": ["urn:li:fsd_profileLanguage:LANG1"]
+    },
+    {
+      "entityUrn": "urn:li:fsd_profileLanguage:LANG1",
+      "$type": "com.linkedin.voyager.dash.identity.profile.ProfileLanguage",
+      "name": "English",
+      "proficiency": "NATIVE_OR_BILINGUAL"
+    },
+
+    {
+      "entityUrn": "urn:li:fsd_profile:ACoAAASYNTH1/honors",
+      "$type": "com.linkedin.restli.common.CollectionResponse",
+      "*elements": []
+    }
+  ]
+}

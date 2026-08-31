@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.env
+.env.local
+*.har
+captures/
+!captures/.gitkeep
+.DS_Store
+*.log
+coverage/
+
+# Probe dumps are unredacted live captures; regenerate with `npm run probe -- <url> --save`
+tests/fixtures/probe-*.json
+
+# runtime cache snapshot
+data/

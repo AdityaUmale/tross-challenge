@@ -1,0 +1,2125 @@
+{
+  "data": {
+    "entityUrn": "urn:li:collectionResponse:685wjM0gFh/a27UqezfXgF+mImLOPr6nc1NvzNwc3hw=",
+    "paging": {
+      "count": 10,
+      "start": 0,
+      "links": []
+    },
+    "*elements": [
+      "urn:li:fsd_profile:ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo"
+    ],
+    "$type": "com.linkedin.restli.common.CollectionResponse"
+  },
+  "included": [
+    {
+      "paging": {
+        "total": 1,
+        "count": 20,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "*elements": [
+        "urn:li:fsd_profilePosition:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,2840076107)"
+      ],
+      "entityUrn": "urn:li:collectionResponse:XQTQmN/GOxS+wrU8ShQ98jxbP2GEgsk/Pzciv5gPp4w=",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfilePositionsInGroup"
+      ],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "total": 0,
+        "count": 10,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "entityUrn": "urn:li:collectionResponse:iS6L7Rn7U64pFa44Z3FbgdEO9egCyGGfh3UnISoTcno=",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileTreasuryMediaItemsInjection"
+      ],
+      "elements": [],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "total": 1,
+        "count": 20,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "*elements": [
+        "urn:li:fsd_profilePosition:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,2513631577)"
+      ],
+      "entityUrn": "urn:li:collectionResponse:ikNWclwTodYkn8QLEwbjwX9amAvtzXBi4CASK2BEyhE=",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfilePositionsInGroup"
+      ],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "total": 2,
+        "count": 20,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "*elements": [
+        "urn:li:fsd_profileCertification:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,1367405625)",
+        "urn:li:fsd_profileCertification:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,1367100318)"
+      ],
+      "entityUrn": "urn:li:collectionResponse:YJHjEm8k1MDTu9IRDenkilChBlMOeYPXwGnjhO8MZyI=",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileCertificationsInjection"
+      ],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "total": 0,
+        "count": 20,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "entityUrn": "urn:li:collectionResponse:D2tZF17aRwfr3jjiJizfRz6xsOu8DGPNiZy5x/NA6yw=",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfilePatentsInjection"
+      ],
+      "elements": [],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "total": 0,
+        "count": 10,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "entityUrn": "urn:li:collectionResponse:BVtORg93S7UgjGJhu9IoHTyufRBoRD59VMxpSYqTSqw=",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileTreasuryMediaItemsInjection"
+      ],
+      "elements": [],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "total": 0,
+        "count": 20,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "entityUrn": "urn:li:collectionResponse:HAF3i+Wuh03YaRnXogYnM+YKqxFPBBHxGzvx4o5+9C4=",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileVolunteerExperiencesInjection"
+      ],
+      "elements": [],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "total": 0,
+        "count": 10,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "entityUrn": "urn:li:collectionResponse:qECgGziaZ22hlRqZBK1Y5NWVIe1voZP6aR8rfmooEQ0=",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileTreasuryMediaItemsInjection"
+      ],
+      "elements": [],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "total": 0,
+        "count": 20,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "entityUrn": "urn:li:collectionResponse:ONAwC9aBEWxeh5+4QHLWO1v0cncfjf/IJVIHAieKt2E=",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfilePublicationsInjection"
+      ],
+      "elements": [],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "total": 5,
+        "count": 10,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "*elements": [
+        "urn:li:fsd_profilePositionGroup:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,2c3a83e4fd849bddf309334ace2e3cc20347f76b)",
+        "urn:li:fsd_profilePositionGroup:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,8b171bf156e495b2f1186a33e74dfbcc76e5c397)",
+        "urn:li:fsd_profilePositionGroup:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,d869d7c748bf485549622b5bf8e6baba445ba4c9)",
+        "urn:li:fsd_profilePositionGroup:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,c4ac1e558b8e88fe96f7826a512a3b35cbeebd94)",
+        "urn:li:fsd_profilePositionGroup:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,e23b90f4aafe712bdc1062f5f0541bcd7de88a28)"
+      ],
+      "entityUrn": "urn:li:collectionResponse:M5wL2w3KutL5LDCJtbGWqKApTSCWZ5ilQagqJLD5As0=",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfilePositionGroupsInjection"
+      ],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "count": 10,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "entityUrn": "urn:li:collectionResponse:dTWxGE1oLcIf38caxFRkagSmD/KvN6JL1HfkwHB/8jM=",
+      "$recipeTypes": [
+        "com.linkedin.deco.recipe.anonymous.Anon429038699"
+      ],
+      "elements": [],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "total": 3,
+        "count": 10,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "entityUrn": "urn:li:collectionResponse:BIZsQTtqlpFoMoyKy4zp6tgXr+Ru2D0VDA9a2pLgUR8=",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileTreasuryMediaItemsInjection"
+      ],
+      "elements": [],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "total": 0,
+        "count": 20,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "entityUrn": "urn:li:collectionResponse:qFlYBScktokqmaj4Ity5+L6v+2m+CqCyj3QvuDbW1/k=",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileCoursesInjection"
+      ],
+      "elements": [],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "total": 1,
+        "count": 20,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "*elements": [
+        "urn:li:fsd_profilePosition:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,2513635245)"
+      ],
+      "entityUrn": "urn:li:collectionResponse:7j5uHqWuCE/0E97OFzv5UkAtA/uxZQjKBq4qYsFsgQk=",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfilePositionsInGroup"
+      ],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "total": 1,
+        "count": 20,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "*elements": [
+        "urn:li:fsd_profileEducation:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,849367883)"
+      ],
+      "entityUrn": "urn:li:collectionResponse:30/Kubi03St9zbunwyXSrLdZgLdr3UNoMU1K5vR2fyI=",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileEducationsInjection"
+      ],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "total": 23,
+        "count": 20,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "*elements": [
+        "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,7)",
+        "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,8)",
+        "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,9)",
+        "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,6)",
+        "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,5)",
+        "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,1)",
+        "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,2)",
+        "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,3)",
+        "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,4)",
+        "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,903616767)",
+        "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,393430261)",
+        "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,1491033481)",
+        "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,1490993033)",
+        "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,1490982443)",
+        "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,1490963049)",
+        "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,1579821489)",
+        "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,1579809272)",
+        "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,1579771093)",
+        "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,1579754078)",
+        "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,1533349406)"
+      ],
+      "entityUrn": "urn:li:collectionResponse:zaYRf98feqy+mulywyX9xTyYyxIFilzWZD7wMMoDa9I=",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileSkillsInjection"
+      ],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "total": 0,
+        "count": 10,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "entityUrn": "urn:li:collectionResponse:mNi9MYRZGPvU8Kk6VqcjxXSz3nr3wckO0XKXNfbNqwA=",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileTreasuryMediaItemsInjection"
+      ],
+      "elements": [],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "total": 0,
+        "count": 10,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "entityUrn": "urn:li:collectionResponse:O7tI6/5gxMVw52wu36dirSe47txk74pnZDLarjQVFRE=",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileTreasuryMediaItemsInjection"
+      ],
+      "elements": [],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "total": 0,
+        "count": 10,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "entityUrn": "urn:li:collectionResponse:ElUodGpv/asYuiLj8FV5Bqcxb3olykKXDDB+6Q1/cLc=",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileTreasuryMediaItemsInjection"
+      ],
+      "elements": [],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "total": 0,
+        "count": 20,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "entityUrn": "urn:li:collectionResponse:idvtJtdekgdp4TX4dcCnfyg2kqA4zXrFDGljm4jW39c=",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileProjectsInjection"
+      ],
+      "elements": [],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "total": 0,
+        "count": 20,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "entityUrn": "urn:li:collectionResponse:ACP+oS/59qfIeUWb2dG7OakWnhAcMOz/LfnKsQxZeVk=",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileTestScoresInjection"
+      ],
+      "elements": [],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "total": 0,
+        "count": 20,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "entityUrn": "urn:li:collectionResponse:eSccdpR+FIn+hEs9VSDls+h+qhJ2CR4mkDbUYDqlalU=",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileOrganizationsInjection"
+      ],
+      "elements": [],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "total": 1,
+        "count": 20,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "*elements": [
+        "urn:li:fsd_profilePosition:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,2792083972)"
+      ],
+      "entityUrn": "urn:li:collectionResponse:ST4hFzRYrARCX/0RtAsXYw6q3o5/wOXbd547HLJTiJ8=",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfilePositionsInGroup"
+      ],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "count": 10,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "entityUrn": "urn:li:collectionResponse:DQKSW/N3yXwRnJmsh4Vxg191sy5GpmMqVo88dTntWsI=",
+      "$recipeTypes": [
+        "com.linkedin.deco.recipe.anonymous.Anon1936086081"
+      ],
+      "elements": [],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "total": 1,
+        "count": 20,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "*elements": [
+        "urn:li:fsd_profilePosition:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,2841416615)"
+      ],
+      "entityUrn": "urn:li:collectionResponse:LHD/MYa7MODkHHR2IdsP5B/r9I2M9c0RuN8NSoAuIEs=",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfilePositionsInGroup"
+      ],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "total": 0,
+        "count": 20,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "entityUrn": "urn:li:collectionResponse:aqnlJJcC/pNLTNXKAeNCwfPJOr0l1mIKTUtOavomJVM=",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileLanguagesInjection"
+      ],
+      "elements": [],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "paging": {
+        "total": 0,
+        "count": 20,
+        "start": 0,
+        "links": [],
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.FullPaging"
+        ],
+        "$type": "com.linkedin.restli.common.CollectionMetadata"
+      },
+      "entityUrn": "urn:li:collectionResponse:twBB2o9Y1BCwihYTTSY8EDrc07tYXYSGfeg7F4EuWbM=",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileHonorsInjection"
+      ],
+      "elements": [],
+      "$type": "com.linkedin.restli.common.CollectionResponse"
+    },
+    {
+      "entityUrn": "urn:li:fsd_geo:105080838",
+      "$recipeTypes": [
+        "com.linkedin.deco.recipe.anonymous.Anon1271139837"
+      ],
+      "$type": "com.linkedin.voyager.dash.common.Geo"
+    },
+    {
+      "countryUrn": "urn:li:fsd_geo:102713980",
+      "defaultLocalizedNameWithoutCountryName": "Akola, Maharashtra",
+      "*country": "urn:li:fsd_geo:102713980",
+      "entityUrn": "urn:li:fsd_geo:113846991",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.Geo"
+      ],
+      "defaultLocalizedName": "Akola, Maharashtra, India",
+      "$type": "com.linkedin.voyager.dash.common.Geo"
+    },
+    {
+      "entityUrn": "urn:li:fsd_geo:102713980",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.CountryGeo",
+        "com.linkedin.deco.recipe.anonymous.Anon1271139837"
+      ],
+      "defaultLocalizedName": "India",
+      "$type": "com.linkedin.voyager.dash.common.Geo"
+    },
+    {
+      "entityUrn": "urn:li:fsd_geo:107229758",
+      "$recipeTypes": [
+        "com.linkedin.deco.recipe.anonymous.Anon1271139837"
+      ],
+      "$type": "com.linkedin.voyager.dash.common.Geo"
+    },
+    {
+      "entityUrn": "urn:li:fsd_industry:4",
+      "name": "Computer Software",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.common.Industry"
+      ],
+      "$type": "com.linkedin.voyager.dash.common.Industry"
+    },
+    {
+      "entityUrn": "urn:li:fsd_industry:100",
+      "name": "Non-profit Organization Management",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.common.Industry"
+      ],
+      "$type": "com.linkedin.voyager.dash.common.Industry"
+    },
+    {
+      "entityUrn": "urn:li:fsd_industry:124",
+      "name": "Health, Wellness & Fitness",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.common.Industry"
+      ],
+      "$type": "com.linkedin.voyager.dash.common.Industry"
+    },
+    {
+      "entityUrn": "urn:li:fsd_industry:96",
+      "name": "Information Technology & Services",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.common.Industry"
+      ],
+      "$type": "com.linkedin.voyager.dash.common.Industry"
+    },
+    {
+      "dateRange": {
+        "start": {
+          "year": 2021,
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.Date"
+          ],
+          "$type": "com.linkedin.common.Date"
+        },
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.DateRange"
+        ],
+        "$type": "com.linkedin.common.DateRange"
+      },
+      "multiLocaleLicenseNumber": {
+        "en_US": "ecell2021"
+      },
+      "*company": "urn:li:fsd_company:246895",
+      "companyUrn": "urn:li:fsd_company:246895",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileCertification"
+      ],
+      "url": null,
+      "$type": "com.linkedin.voyager.dash.identity.profile.Certification",
+      "multiLocaleAuthority": {
+        "en_US": "E-Cell, IIT Bombay"
+      },
+      "entityUrn": "urn:li:fsd_profileCertification:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,1367100318)",
+      "authority": "E-Cell, IIT Bombay",
+      "name": "NEC '24 Basic Track - Participation",
+      "multiLocaleName": {
+        "en_US": "NEC '24 Basic Track - Participation"
+      },
+      "licenseNumber": "ecell2021",
+      "displaySource": null
+    },
+    {
+      "dateRange": {
+        "start": {
+          "month": 11,
+          "year": 2024,
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.Date"
+          ],
+          "$type": "com.linkedin.common.Date"
+        },
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.DateRange"
+        ],
+        "$type": "com.linkedin.common.DateRange"
+      },
+      "multiLocaleLicenseNumber": {
+        "en_US": "VA0V0NTQ"
+      },
+      "*company": "urn:li:fsd_company:102965693",
+      "companyUrn": "urn:li:fsd_company:102965693",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileCertification"
+      ],
+      "url": null,
+      "$type": "com.linkedin.voyager.dash.identity.profile.Certification",
+      "multiLocaleAuthority": {
+        "en_US": "100xDevs"
+      },
+      "entityUrn": "urn:li:fsd_profileCertification:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,1367405625)",
+      "authority": "100xDevs",
+      "name": "Full Stack Development",
+      "multiLocaleName": {
+        "en_US": "Full Stack Development"
+      },
+      "licenseNumber": "VA0V0NTQ",
+      "displaySource": null
+    },
+    {
+      "dateRange": {
+        "start": {
+          "year": 2021,
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.Date"
+          ],
+          "$type": "com.linkedin.common.Date"
+        },
+        "end": {
+          "year": 2025,
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.Date"
+          ],
+          "$type": "com.linkedin.common.Date"
+        },
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.DateRange"
+        ],
+        "$type": "com.linkedin.common.DateRange"
+      },
+      "description": null,
+      "*company": "urn:li:fsd_company:15104820",
+      "*profileTreasuryMediaEducation": "urn:li:collectionResponse:O7tI6/5gxMVw52wu36dirSe47txk74pnZDLarjQVFRE=",
+      "companyUrn": "urn:li:fsd_company:15104820",
+      "schoolUrn": "urn:li:fsd_school:203084",
+      "entityUrn": "urn:li:fsd_profileEducation:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,849367883)",
+      "standardizedFieldOfStudyUrn": null,
+      "schoolName": "College of Engineering & Technology, Akola.",
+      "fieldOfStudy": null,
+      "degreeName": null,
+      "multiLocaleGrade": null,
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileEducation"
+      ],
+      "multiLocaleSchoolName": {
+        "en_US": "College of Engineering & Technology, Akola."
+      },
+      "$type": "com.linkedin.voyager.dash.identity.profile.Education",
+      "multiLocaleActivities": null,
+      "activities": null,
+      "grade": null,
+      "*school": "urn:li:fsd_school:203084",
+      "multiLocaleFieldOfStudy": null,
+      "multiLocaleDescription": null,
+      "degreeUrn": null,
+      "multiLocaleDegreeName": null
+    },
+    {
+      "entityUrn": "urn:li:fsd_employmentType:18",
+      "companyNameRequired": true,
+      "name": "Internship",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.EmploymentType"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.EmploymentType"
+    },
+    {
+      "entityUrn": "urn:li:fsd_employmentType:12",
+      "companyNameRequired": true,
+      "name": "Full-time",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.EmploymentType"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.EmploymentType"
+    },
+    {
+      "dateRange": {
+        "start": {
+          "month": 9,
+          "year": 2024,
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.Date"
+          ],
+          "$type": "com.linkedin.common.Date"
+        },
+        "end": {
+          "month": 3,
+          "year": 2025,
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.Date"
+          ],
+          "$type": "com.linkedin.common.Date"
+        },
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.DateRange"
+        ],
+        "$type": "com.linkedin.common.DateRange"
+      },
+      "multiLocaleCompanyName": {
+        "en_US": "E-Cell, COETA"
+      },
+      "companyName": "E-Cell, COETA",
+      "*company": "urn:li:fsd_company:105089835",
+      "title": "Vice President",
+      "companyUrn": "urn:li:fsd_company:105089835",
+      "*employmentType": "urn:li:fsd_employmentType:12",
+      "employmentTypeUrn": "urn:li:fsd_employmentType:12",
+      "entityUrn": "urn:li:fsd_profilePosition:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,2513631577)",
+      "multiLocaleGeoLocationName": {
+        "en_US": "Akola, Maharashtra, India"
+      },
+      "shouldShowSourceOfHireBadge": false,
+      "locationName": "Akola, Maharashtra, India",
+      "*profileTreasuryMediaPosition": "urn:li:collectionResponse:qECgGziaZ22hlRqZBK1Y5NWVIe1voZP6aR8rfmooEQ0=",
+      "multiLocaleTitle": {
+        "en_US": "Vice President"
+      },
+      "geoUrn": "urn:li:fsd_geo:107229758",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfilePosition"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Position",
+      "*geo": "urn:li:fsd_geo:107229758",
+      "geoLocationName": "Akola, Maharashtra, India",
+      "multiLocaleLocationName": {
+        "en_US": "Akola, Maharashtra, India"
+      },
+      "sourceOfHireType": "OTHER"
+    },
+    {
+      "shouldShowSourceOfHireBadge": false,
+      "*profileTreasuryMediaPosition": "urn:li:collectionResponse:BVtORg93S7UgjGJhu9IoHTyufRBoRD59VMxpSYqTSqw=",
+      "multiLocaleTitle": {
+        "en_US": "Founding Engineer"
+      },
+      "dateRange": {
+        "start": {
+          "month": 2,
+          "year": 2026,
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.Date"
+          ],
+          "$type": "com.linkedin.common.Date"
+        },
+        "end": {
+          "month": 8,
+          "year": 2026,
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.Date"
+          ],
+          "$type": "com.linkedin.common.Date"
+        },
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.DateRange"
+        ],
+        "$type": "com.linkedin.common.DateRange"
+      },
+      "multiLocaleCompanyName": {
+        "en_US": "Lazy Monk Labs"
+      },
+      "companyName": "Lazy Monk Labs",
+      "*company": "urn:li:fsd_company:109458672",
+      "title": "Founding Engineer",
+      "companyUrn": "urn:li:fsd_company:109458672",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfilePosition"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Position",
+      "*employmentType": "urn:li:fsd_employmentType:12",
+      "employmentTypeUrn": "urn:li:fsd_employmentType:12",
+      "entityUrn": "urn:li:fsd_profilePosition:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,2841416615)"
+    },
+    {
+      "shouldShowSourceOfHireBadge": false,
+      "*profileTreasuryMediaPosition": "urn:li:collectionResponse:iS6L7Rn7U64pFa44Z3FbgdEO9egCyGGfh3UnISoTcno=",
+      "multiLocaleTitle": {
+        "en_US": "Volunteer"
+      },
+      "dateRange": {
+        "start": {
+          "month": 2,
+          "year": 2026,
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.Date"
+          ],
+          "$type": "com.linkedin.common.Date"
+        },
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.DateRange"
+        ],
+        "$type": "com.linkedin.common.DateRange"
+      },
+      "multiLocaleCompanyName": {
+        "en_US": "NIRMAN For Youth"
+      },
+      "companyName": "NIRMAN For Youth",
+      "*company": "urn:li:fsd_company:79772818",
+      "title": "Volunteer",
+      "companyUrn": "urn:li:fsd_company:79772818",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfilePosition"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Position",
+      "entityUrn": "urn:li:fsd_profilePosition:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,2840076107)"
+    },
+    {
+      "dateRange": {
+        "start": {
+          "month": 8,
+          "year": 2025,
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.Date"
+          ],
+          "$type": "com.linkedin.common.Date"
+        },
+        "end": {
+          "month": 2,
+          "year": 2026,
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.Date"
+          ],
+          "$type": "com.linkedin.common.Date"
+        },
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.DateRange"
+        ],
+        "$type": "com.linkedin.common.DateRange"
+      },
+      "multiLocaleCompanyName": {
+        "en_US": "Giddly"
+      },
+      "companyName": "Giddly",
+      "description": "- My Major work was developing the business web app for the company with react and Go language.\n- Add features and maintain iOS app in React native.\n- Discuss system design and features with the Team.\n- Participate in code reviews in the team.",
+      "title": "Software Engineer",
+      "*employmentType": "urn:li:fsd_employmentType:12",
+      "employmentTypeUrn": "urn:li:fsd_employmentType:12",
+      "entityUrn": "urn:li:fsd_profilePosition:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,2792083972)",
+      "multiLocaleGeoLocationName": {
+        "en_US": "New York, United States"
+      },
+      "shouldShowSourceOfHireBadge": false,
+      "locationName": "New York, United States",
+      "*profileTreasuryMediaPosition": "urn:li:collectionResponse:mNi9MYRZGPvU8Kk6VqcjxXSz3nr3wckO0XKXNfbNqwA=",
+      "multiLocaleTitle": {
+        "en_US": "Software Engineer"
+      },
+      "geoUrn": "urn:li:fsd_geo:105080838",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfilePosition"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Position",
+      "*geo": "urn:li:fsd_geo:105080838",
+      "geoLocationName": "New York, United States",
+      "multiLocaleDescription": {
+        "en_US": "- My Major work was developing the business web app for the company with react and Go language.\n- Add features and maintain iOS app in React native.\n- Discuss system design and features with the Team.\n- Participate in code reviews in the team."
+      },
+      "multiLocaleLocationName": {
+        "en_US": "New York, United States"
+      },
+      "sourceOfHireType": "OTHER"
+    },
+    {
+      "dateRange": {
+        "start": {
+          "month": 5,
+          "year": 2024,
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.Date"
+          ],
+          "$type": "com.linkedin.common.Date"
+        },
+        "end": {
+          "month": 7,
+          "year": 2024,
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.Date"
+          ],
+          "$type": "com.linkedin.common.Date"
+        },
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.DateRange"
+        ],
+        "$type": "com.linkedin.common.DateRange"
+      },
+      "multiLocaleCompanyName": {
+        "en_US": "AgiledCoders"
+      },
+      "companyName": "AgiledCoders",
+      "*company": "urn:li:fsd_company:102034183",
+      "title": "Full Stack Engineer",
+      "companyUrn": "urn:li:fsd_company:102034183",
+      "*employmentType": "urn:li:fsd_employmentType:18",
+      "employmentTypeUrn": "urn:li:fsd_employmentType:18",
+      "entityUrn": "urn:li:fsd_profilePosition:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,2513635245)",
+      "multiLocaleGeoLocationName": {
+        "en_US": "India"
+      },
+      "shouldShowSourceOfHireBadge": false,
+      "locationName": "India",
+      "*profileTreasuryMediaPosition": "urn:li:collectionResponse:ElUodGpv/asYuiLj8FV5Bqcxb3olykKXDDB+6Q1/cLc=",
+      "multiLocaleTitle": {
+        "en_US": "Full Stack Engineer"
+      },
+      "geoUrn": "urn:li:fsd_geo:102713980",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfilePosition"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Position",
+      "*geo": "urn:li:fsd_geo:102713980",
+      "geoLocationName": "India",
+      "multiLocaleLocationName": {
+        "en_US": "India"
+      },
+      "sourceOfHireType": "REFERRAL"
+    },
+    {
+      "*profilePositionInPositionGroup": "urn:li:collectionResponse:ST4hFzRYrARCX/0RtAsXYw6q3o5/wOXbd547HLJTiJ8=",
+      "dateRange": {
+        "start": {
+          "month": 8,
+          "year": 2025,
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.Date"
+          ],
+          "$type": "com.linkedin.common.Date"
+        },
+        "end": {
+          "month": 2,
+          "year": 2026,
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.Date"
+          ],
+          "$type": "com.linkedin.common.Date"
+        },
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.DateRange"
+        ],
+        "$type": "com.linkedin.common.DateRange"
+      },
+      "multiLocaleCompanyName": {
+        "en_US": "Giddly"
+      },
+      "companyName": "Giddly",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfilePositionGroup"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.PositionGroup",
+      "entityUrn": "urn:li:fsd_profilePositionGroup:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,d869d7c748bf485549622b5bf8e6baba445ba4c9)"
+    },
+    {
+      "*profilePositionInPositionGroup": "urn:li:collectionResponse:LHD/MYa7MODkHHR2IdsP5B/r9I2M9c0RuN8NSoAuIEs=",
+      "dateRange": {
+        "start": {
+          "month": 2,
+          "year": 2026,
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.Date"
+          ],
+          "$type": "com.linkedin.common.Date"
+        },
+        "end": {
+          "month": 8,
+          "year": 2026,
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.Date"
+          ],
+          "$type": "com.linkedin.common.Date"
+        },
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.DateRange"
+        ],
+        "$type": "com.linkedin.common.DateRange"
+      },
+      "multiLocaleCompanyName": {
+        "en_US": "Lazy Monk Labs"
+      },
+      "companyName": "Lazy Monk Labs",
+      "*company": "urn:li:fsd_company:109458672",
+      "companyUrn": "urn:li:fsd_company:109458672",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfilePositionGroup"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.PositionGroup",
+      "entityUrn": "urn:li:fsd_profilePositionGroup:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,8b171bf156e495b2f1186a33e74dfbcc76e5c397)"
+    },
+    {
+      "*profilePositionInPositionGroup": "urn:li:collectionResponse:XQTQmN/GOxS+wrU8ShQ98jxbP2GEgsk/Pzciv5gPp4w=",
+      "dateRange": {
+        "start": {
+          "month": 2,
+          "year": 2026,
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.Date"
+          ],
+          "$type": "com.linkedin.common.Date"
+        },
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.DateRange"
+        ],
+        "$type": "com.linkedin.common.DateRange"
+      },
+      "multiLocaleCompanyName": {
+        "en_US": "NIRMAN For Youth"
+      },
+      "companyName": "NIRMAN For Youth",
+      "*company": "urn:li:fsd_company:79772818",
+      "companyUrn": "urn:li:fsd_company:79772818",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfilePositionGroup"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.PositionGroup",
+      "entityUrn": "urn:li:fsd_profilePositionGroup:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,2c3a83e4fd849bddf309334ace2e3cc20347f76b)"
+    },
+    {
+      "*profilePositionInPositionGroup": "urn:li:collectionResponse:ikNWclwTodYkn8QLEwbjwX9amAvtzXBi4CASK2BEyhE=",
+      "dateRange": {
+        "start": {
+          "month": 9,
+          "year": 2024,
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.Date"
+          ],
+          "$type": "com.linkedin.common.Date"
+        },
+        "end": {
+          "month": 3,
+          "year": 2025,
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.Date"
+          ],
+          "$type": "com.linkedin.common.Date"
+        },
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.DateRange"
+        ],
+        "$type": "com.linkedin.common.DateRange"
+      },
+      "multiLocaleCompanyName": {
+        "en_US": "E-Cell, COETA"
+      },
+      "companyName": "E-Cell, COETA",
+      "*company": "urn:li:fsd_company:105089835",
+      "companyUrn": "urn:li:fsd_company:105089835",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfilePositionGroup"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.PositionGroup",
+      "entityUrn": "urn:li:fsd_profilePositionGroup:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,c4ac1e558b8e88fe96f7826a512a3b35cbeebd94)"
+    },
+    {
+      "*profilePositionInPositionGroup": "urn:li:collectionResponse:7j5uHqWuCE/0E97OFzv5UkAtA/uxZQjKBq4qYsFsgQk=",
+      "dateRange": {
+        "start": {
+          "month": 5,
+          "year": 2024,
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.Date"
+          ],
+          "$type": "com.linkedin.common.Date"
+        },
+        "end": {
+          "month": 7,
+          "year": 2024,
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.Date"
+          ],
+          "$type": "com.linkedin.common.Date"
+        },
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.DateRange"
+        ],
+        "$type": "com.linkedin.common.DateRange"
+      },
+      "multiLocaleCompanyName": {
+        "en_US": "AgiledCoders"
+      },
+      "companyName": "AgiledCoders",
+      "*company": "urn:li:fsd_company:102034183",
+      "companyUrn": "urn:li:fsd_company:102034183",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfilePositionGroup"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.PositionGroup",
+      "entityUrn": "urn:li:fsd_profilePositionGroup:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,e23b90f4aafe712bdc1062f5f0541bcd7de88a28)"
+    },
+    {
+      "birthDateOn": {
+        "month": 3,
+        "day": 17,
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.Date"
+        ],
+        "$type": "com.linkedin.common.Date"
+      },
+      "multiLocalePhoneticLastName": null,
+      "industryV2Urn": null,
+      "objectUrn": "urn:li:member:1071159976",
+      "multiLocaleLastName": {
+        "en_US": "Umale"
+      },
+      "*profilePositionGroups": "urn:li:collectionResponse:M5wL2w3KutL5LDCJtbGWqKApTSCWZ5ilQagqJLD5As0=",
+      "*profileVideoPreview": "urn:li:collectionResponse:dTWxGE1oLcIf38caxFRkagSmD/KvN6JL1HfkwHB/8jM=",
+      "*profileCertifications": "urn:li:collectionResponse:YJHjEm8k1MDTu9IRDenkilChBlMOeYPXwGnjhO8MZyI=",
+      "pronounUnion": null,
+      "multiLocaleFirstNamePronunciationHint": {},
+      "multiLocaleLastNamePronunciationHint": {},
+      "*profileTestScores": "urn:li:collectionResponse:ACP+oS/59qfIeUWb2dG7OakWnhAcMOz/LfnKsQxZeVk=",
+      "tempStatusExpiredAtUnion": null,
+      "multiLocaleFirstName": {
+        "en_US": "Aditya "
+      },
+      "multiLocaleTempStatus": null,
+      "companyNameOnProfileTopCardShown": false,
+      "*profileLanguages": "urn:li:collectionResponse:aqnlJJcC/pNLTNXKAeNCwfPJOr0l1mIKTUtOavomJVM=",
+      "state": null,
+      "publicIdentifier": "aditya-umale-2b489025a",
+      "phoneticFirstName": null,
+      "multiLocaleSummary": {
+        "en_US": "Hello! I\u2019m Aditya, a passionate developer who loves using technology to solve real-world problems and drive meaningful impact.\n\nCurrently, I\u2019m building in Generative AI and full-stack development. Over the past few years, I\u2019ve worked on several personal and freelance projects that served real users. Along the way, I\u2019ve also won a few hackathons and bounties.\n\nBeyond the code, I\u2019ve taken initiative in leadership roles , leading both the Entrepreneurship Cell and Tech Club at my college, where I fostered innovation and collaboration."
+      },
+      "firstNamePronunciationHint": null,
+      "lastNamePronunciationHint": null,
+      "versionTag": "4053365481",
+      "*profilePatents": "urn:li:collectionResponse:D2tZF17aRwfr3jjiJizfRz6xsOu8DGPNiZy5x/NA6yw=",
+      "associatedHashtagsCopy": null,
+      "profilePicture": {
+        "originalImageReference": {
+          "vectorImage": {
+            "$recipeTypes": [
+              "com.linkedin.voyager.dash.deco.common.VectorImageOnlyRootUrlAndAttribution"
+            ],
+            "rootUrl": "https://www.linkedin.com/dms/prv/image/v2/D4D04AQH__7hzI4QWrw/profile-originalphoto-shrink_",
+            "artifacts": [
+              {
+                "width": 675,
+                "$recipeTypes": [
+                  "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+                ],
+                "fileIdentifyingUrlPathSegment": "900_1200/B4DZdoUGMaGkAI-/0/1749801790239?m=AQLDKa-MLLzAXAAAAaBTJd8JlObylzthY6xfQXC3dPVqsZ_DlGm7tDq74gA&e=1788187785&v=beta&t=IRvnKLlTB4YrdG15U6yV6W9RSFw66ncSynGNo3zAuJE",
+                "expiresAt": 1788187785000,
+                "height": 900,
+                "$type": "com.linkedin.common.VectorArtifact"
+              },
+              {
+                "width": 337,
+                "$recipeTypes": [
+                  "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+                ],
+                "fileIdentifyingUrlPathSegment": "450_600/B4DZdoUGMaGkAQ-/0/1749801790239?m=AQJCoqO2DUHVugAAAaBTJd8K0F8pQpyWygRg7q_UpEwDftQlWLm9iaoRewM&e=1788187785&v=beta&t=MK5__Nw9GjT-UQWNCBurfbxCVvB87Ji7PULBEDm7JQk",
+                "expiresAt": 1788187785000,
+                "height": 450,
+                "$type": "com.linkedin.common.VectorArtifact"
+              }
+            ],
+            "$type": "com.linkedin.common.VectorImage"
+          }
+        },
+        "originalImageUrn": "urn:li:digitalmediaAsset:D4D04AQH__7hzI4QWrw",
+        "displayImageReference": {
+          "vectorImage": {
+            "$recipeTypes": [
+              "com.linkedin.voyager.dash.deco.common.VectorImageOnlyRootUrlAndAttribution"
+            ],
+            "rootUrl": "https://media.licdn.com/dms/image/v2/D4D03AQEVPChXnqCQRg/profile-displayphoto-shrink_",
+            "artifacts": [
+              {
+                "width": 200,
+                "$recipeTypes": [
+                  "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+                ],
+                "fileIdentifyingUrlPathSegment": "200_200/B4DZdoUGMxGUAY-/0/1749801789266?e=1789603200&v=beta&t=cyFGssZbjrc9ydxCcLAW5p2Wq-t-cl9relxTPDCGPA0",
+                "expiresAt": 1789603200000,
+                "height": 200,
+                "$type": "com.linkedin.common.VectorArtifact"
+              },
+              {
+                "width": 800,
+                "$recipeTypes": [
+                  "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+                ],
+                "fileIdentifyingUrlPathSegment": "800_800/B4DZdoUGMxGUAc-/0/1749801789297?e=1789603200&v=beta&t=e_etRspbZcNfUGxva97zHGqEfHtjD3LhgIBkXDfbmDI",
+                "expiresAt": 1789603200000,
+                "height": 800,
+                "$type": "com.linkedin.common.VectorArtifact"
+              },
+              {
+                "width": 100,
+                "$recipeTypes": [
+                  "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+                ],
+                "fileIdentifyingUrlPathSegment": "100_100/B4DZdoUGMxGUAU-/0/1749801789297?e=1789603200&v=beta&t=47fJtkiVU6T8W5aEiJMLBHv61tYCopP27PiBmbdsvfg",
+                "expiresAt": 1789603200000,
+                "height": 100,
+                "$type": "com.linkedin.common.VectorArtifact"
+              },
+              {
+                "width": 400,
+                "$recipeTypes": [
+                  "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+                ],
+                "fileIdentifyingUrlPathSegment": "400_400/B4DZdoUGMxGUAg-/0/1749801789297?e=1789603200&v=beta&t=efWOS5p9uQiCV3cPiQw43aiNtKYqAnYCFzbRIekeqFQ",
+                "expiresAt": 1789603200000,
+                "height": 400,
+                "$type": "com.linkedin.common.VectorArtifact"
+              }
+            ],
+            "$type": "com.linkedin.common.VectorImage"
+          }
+        },
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.identity.profile.ProfilePhotoDecoSpecEditableProfilePicture"
+        ],
+        "displayImageUrn": "urn:li:digitalmediaAsset:D4D03AQEVPChXnqCQRg",
+        "photoFilterEditInfo": {
+          "bottomLeft": {
+            "x": 0.1197514983764433,
+            "y": 0.8526670951156814,
+            "$recipeTypes": [
+              "com.linkedin.voyager.dash.deco.common.Coordinate2DFull"
+            ],
+            "$type": "com.linkedin.common.Coordinate2D"
+          },
+          "vignette": 0,
+          "bottomRight": {
+            "x": 0.9530848317097766,
+            "y": 0.8526670951156814,
+            "$recipeTypes": [
+              "com.linkedin.voyager.dash.deco.common.Coordinate2DFull"
+            ],
+            "$type": "com.linkedin.common.Coordinate2D"
+          },
+          "topRight": {
+            "x": 0.9530848317097766,
+            "y": 0.2276670951156812,
+            "$recipeTypes": [
+              "com.linkedin.voyager.dash.deco.common.Coordinate2DFull"
+            ],
+            "$type": "com.linkedin.common.Coordinate2D"
+          },
+          "$recipeTypes": [
+            "com.linkedin.deco.recipe.anonymous.Anon1309211116"
+          ],
+          "$type": "com.linkedin.voyager.dash.identity.profile.PhotoFilterEditInfo",
+          "saturation": 0,
+          "brightness": 0,
+          "photoFilterType": "ORIGINAL",
+          "contrast": 0,
+          "topLeft": {
+            "x": 0.1197514983764433,
+            "y": 0.2276670951156812,
+            "$recipeTypes": [
+              "com.linkedin.voyager.dash.deco.common.Coordinate2DFull"
+            ],
+            "$type": "com.linkedin.common.Coordinate2D"
+          }
+        },
+        "$type": "com.linkedin.voyager.dash.identity.profile.PhotoFilterPicture"
+      },
+      "firstName": "Aditya ",
+      "*profileOrganizations": "urn:li:collectionResponse:eSccdpR+FIn+hEs9VSDls+h+qhJ2CR4mkDbUYDqlalU=",
+      "multiLocaleMaidenName": null,
+      "*profileHonors": "urn:li:collectionResponse:twBB2o9Y1BCwihYTTSY8EDrc07tYXYSGfeg7F4EuWbM=",
+      "*profileSkills": "urn:li:collectionResponse:zaYRf98feqy+mulywyX9xTyYyxIFilzWZD7wMMoDa9I=",
+      "multiLocaleHeadline": {
+        "en_US": "Building graspnote.com | Ex Founding Engineer at Lazy monk labs | Giddly"
+      },
+      "*profileProjects": "urn:li:collectionResponse:idvtJtdekgdp4TX4dcCnfyg2kqA4zXrFDGljm4jW39c=",
+      "*profilePublications": "urn:li:collectionResponse:ONAwC9aBEWxeh5+4QHLWO1v0cncfjf/IJVIHAieKt2E=",
+      "memorialized": false,
+      "lastName": "Umale",
+      "multiLocalePhoneticFirstName": null,
+      "volunteerCauses": null,
+      "*industry": "urn:li:fsd_industry:4",
+      "showPremiumSubscriberBadge": false,
+      "tempStatusEmoji": null,
+      "maidenName": null,
+      "geoLocationBackfilled": false,
+      "multiLocaleFullNamePronunciationAudio": {},
+      "phoneticLastName": null,
+      "premium": false,
+      "influencer": false,
+      "*profileCourses": "urn:li:collectionResponse:qFlYBScktokqmaj4Ity5+L6v+2m+CqCyj3QvuDbW1/k=",
+      "entityUrn": "urn:li:fsd_profile:ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo",
+      "*profileRingStatusCollection": "urn:li:collectionResponse:DQKSW/N3yXwRnJmsh4Vxg191sy5GpmMqVo88dTntWsI=",
+      "*profileEducations": "urn:li:collectionResponse:30/Kubi03St9zbunwyXSrLdZgLdr3UNoMU1K5vR2fyI=",
+      "headline": "Building graspnote.com | Ex Founding Engineer at Lazy monk labs | Giddly",
+      "fullNamePronunciationAudio": null,
+      "summary": "Hello! I\u2019m Aditya, a passionate developer who loves using technology to solve real-world problems and drive meaningful impact.\n\nCurrently, I\u2019m building in Generative AI and full-stack development. Over the past few years, I\u2019ve worked on several personal and freelance projects that served real users. Along the way, I\u2019ve also won a few hackathons and bounties.\n\nBeyond the code, I\u2019ve taken initiative in leadership roles , leading both the Entrepreneurship Cell and Tech Club at my college, where I fostered innovation and collaboration.",
+      "creator": false,
+      "supportedLocales": [
+        {
+          "country": "US",
+          "language": "en",
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.Locale"
+          ],
+          "$type": "com.linkedin.common.Locale"
+        }
+      ],
+      "address": null,
+      "locationName": null,
+      "multiLocaleAddress": null,
+      "*profileVolunteerExperiences": "urn:li:collectionResponse:HAF3i+Wuh03YaRnXogYnM+YKqxFPBBHxGzvx4o5+9C4=",
+      "educationOnProfileTopCardShown": true,
+      "industryUrn": "urn:li:fsd_industry:4",
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileWithEntities"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Profile",
+      "geoLocation": {
+        "*geo": "urn:li:fsd_geo:113846991",
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.identity.profile.ProfileGeoLocation"
+        ],
+        "geoUrn": "urn:li:fsd_geo:113846991",
+        "postalCode": null,
+        "$type": "com.linkedin.voyager.dash.identity.profile.ProfileGeoLocation"
+      },
+      "tempStatus": null,
+      "*profileTreasuryMediaProfile": "urn:li:collectionResponse:BIZsQTtqlpFoMoyKy4zp6tgXr+Ru2D0VDA9a2pLgUR8=",
+      "location": {
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.identity.profile.ProfileLocation"
+        ],
+        "countryCode": "IN",
+        "postalCode": null,
+        "$type": "com.linkedin.voyager.dash.identity.profile.ProfileLocation"
+      },
+      "primaryLocale": {
+        "country": "US",
+        "language": "en",
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.Locale"
+        ],
+        "$type": "com.linkedin.common.Locale"
+      },
+      "backgroundPicture": null
+    },
+    {
+      "entityUrn": "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,903616767)",
+      "name": "MySQL",
+      "multiLocaleName": {
+        "en_US": "MySQL"
+      },
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileSkill"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Skill"
+    },
+    {
+      "entityUrn": "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,6)",
+      "name": "Leadership",
+      "multiLocaleName": {
+        "en_US": "Leadership"
+      },
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileSkill"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Skill"
+    },
+    {
+      "entityUrn": "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,1490963049)",
+      "name": "NoSQL",
+      "multiLocaleName": {
+        "en_US": "NoSQL"
+      },
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileSkill"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Skill"
+    },
+    {
+      "entityUrn": "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,393430261)",
+      "name": "TypeScript",
+      "multiLocaleName": {
+        "en_US": "TypeScript"
+      },
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileSkill"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Skill"
+    },
+    {
+      "entityUrn": "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,2)",
+      "name": "Event Planning",
+      "multiLocaleName": {
+        "en_US": "Event Planning"
+      },
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileSkill"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Skill"
+    },
+    {
+      "entityUrn": "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,9)",
+      "name": "Software Design",
+      "multiLocaleName": {
+        "en_US": "Software Design"
+      },
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileSkill"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Skill"
+    },
+    {
+      "entityUrn": "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,5)",
+      "name": "Agile Methodologies",
+      "multiLocaleName": {
+        "en_US": "Agile Methodologies"
+      },
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileSkill"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Skill"
+    },
+    {
+      "entityUrn": "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,1490982443)",
+      "name": "Next.js",
+      "multiLocaleName": {
+        "en_US": "Next.js"
+      },
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileSkill"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Skill"
+    },
+    {
+      "entityUrn": "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,1491033481)",
+      "name": "Tailwind CSS",
+      "multiLocaleName": {
+        "en_US": "Tailwind CSS"
+      },
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileSkill"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Skill"
+    },
+    {
+      "entityUrn": "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,1)",
+      "name": "Team Management",
+      "multiLocaleName": {
+        "en_US": "Team Management"
+      },
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileSkill"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Skill"
+    },
+    {
+      "entityUrn": "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,8)",
+      "name": "React Native",
+      "multiLocaleName": {
+        "en_US": "React Native"
+      },
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileSkill"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Skill"
+    },
+    {
+      "entityUrn": "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,1579754078)",
+      "name": "MongoDB",
+      "multiLocaleName": {
+        "en_US": "MongoDB"
+      },
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileSkill"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Skill"
+    },
+    {
+      "entityUrn": "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,4)",
+      "name": "Technical Support",
+      "multiLocaleName": {
+        "en_US": "Technical Support"
+      },
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileSkill"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Skill"
+    },
+    {
+      "entityUrn": "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,1533349406)",
+      "name": "JavaScript",
+      "multiLocaleName": {
+        "en_US": "JavaScript"
+      },
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileSkill"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Skill"
+    },
+    {
+      "entityUrn": "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,1490993033)",
+      "name": "PostgreSQL",
+      "multiLocaleName": {
+        "en_US": "PostgreSQL"
+      },
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileSkill"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Skill"
+    },
+    {
+      "entityUrn": "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,1579809272)",
+      "name": "MERN Stack",
+      "multiLocaleName": {
+        "en_US": "MERN Stack"
+      },
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileSkill"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Skill"
+    },
+    {
+      "entityUrn": "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,7)",
+      "name": "Go (Programming Language)",
+      "multiLocaleName": {
+        "en_US": "Go (Programming Language)"
+      },
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileSkill"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Skill"
+    },
+    {
+      "entityUrn": "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,1579821489)",
+      "name": "Express.js",
+      "multiLocaleName": {
+        "en_US": "Express.js"
+      },
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileSkill"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Skill"
+    },
+    {
+      "entityUrn": "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,3)",
+      "name": "Social Media",
+      "multiLocaleName": {
+        "en_US": "Social Media"
+      },
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileSkill"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Skill"
+    },
+    {
+      "entityUrn": "urn:li:fsd_skill:(ACoAAD_YmqgB1Xm14pigQSER_C3ATn03yltHkJo,1579771093)",
+      "name": "Node.js",
+      "multiLocaleName": {
+        "en_US": "Node.js"
+      },
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.FullProfileSkill"
+      ],
+      "$type": "com.linkedin.voyager.dash.identity.profile.Skill"
+    },
+    {
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.LinkableMiniCompany"
+      ],
+      "url": "https://www.linkedin.com/company/ecell_iitb/",
+      "$type": "com.linkedin.voyager.dash.organization.Company",
+      "entityUrn": "urn:li:fsd_company:246895",
+      "name": "E-Cell, IIT Bombay",
+      "logo": {
+        "vectorImage": {
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.VectorImageOnlyRootUrlAndAttribution"
+          ],
+          "rootUrl": "https://media.licdn.com/dms/image/v2/D560BAQHoxm9G3qzLmg/company-logo_",
+          "artifacts": [
+            {
+              "width": 200,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "200_200/company-logo_200_200/0/1735101775945/ecell_iitb_logo?e=1789603200&v=beta&t=KnKG13ltCAAK33z4q75KCDFJcfOSIpbE-rnxFn6gwes",
+              "expiresAt": 1789603200000,
+              "height": 200,
+              "$type": "com.linkedin.common.VectorArtifact"
+            },
+            {
+              "width": 100,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "100_100/company-logo_100_100/0/1735101775945/ecell_iitb_logo?e=1789603200&v=beta&t=d-888ZWShiYWW5-0INlaHZN8cqgIaZnPs9QHkn6Htbc",
+              "expiresAt": 1789603200000,
+              "height": 100,
+              "$type": "com.linkedin.common.VectorArtifact"
+            },
+            {
+              "width": 400,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "400_400/company-logo_400_400/0/1735101775945/ecell_iitb_logo?e=1789603200&v=beta&t=GpBEVHXqm_wUnpg_wTWsaiH3RqI9V5gcRqqSw6OH-0o",
+              "expiresAt": 1789603200000,
+              "height": 400,
+              "$type": "com.linkedin.common.VectorArtifact"
+            }
+          ],
+          "$type": "com.linkedin.common.VectorImage"
+        }
+      },
+      "universalName": "ecell_iitb"
+    },
+    {
+      "industry": {
+        "*urn:li:fsd_industry:96": "urn:li:fsd_industry:96"
+      },
+      "industryUrns": [
+        "urn:li:fsd_industry:96"
+      ],
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.LinkablePositionCompany"
+      ],
+      "url": "https://www.linkedin.com/company/agiledcoders/",
+      "$type": "com.linkedin.voyager.dash.organization.Company",
+      "employeeCountRange": {
+        "start": 2,
+        "end": 10,
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.IntegerRange"
+        ],
+        "$type": "com.linkedin.common.IntegerRange"
+      },
+      "entityUrn": "urn:li:fsd_company:102034183",
+      "name": "AgiledCoders",
+      "logo": {
+        "vectorImage": {
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.VectorImageOnlyRootUrlAndAttribution"
+          ],
+          "rootUrl": "https://media.licdn.com/dms/image/v2/D560BAQHTDuMC85WU_g/company-logo_",
+          "artifacts": [
+            {
+              "width": 200,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "200_200/company-logo_200_200/0/1727011457671/agiledcoders_logo?e=1789603200&v=beta&t=h3oeniVq1EEjCzOMJw7-nxNSEgsz3Ul_LxKtO02WK5Y",
+              "expiresAt": 1789603200000,
+              "height": 200,
+              "$type": "com.linkedin.common.VectorArtifact"
+            },
+            {
+              "width": 100,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "100_100/company-logo_100_100/0/1727011457671/agiledcoders_logo?e=1789603200&v=beta&t=Tc7nvtKDMLT56OmVZQSbccOrRSHDGvHZcjDmUqFdnQc",
+              "expiresAt": 1789603200000,
+              "height": 100,
+              "$type": "com.linkedin.common.VectorArtifact"
+            },
+            {
+              "width": 400,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "400_400/company-logo_400_400/0/1727011457671/agiledcoders_logo?e=1789603200&v=beta&t=cV-LAi1O5-8M2vNmBy9h19GTZoMjX2fzAISVt3TaPEY",
+              "expiresAt": 1789603200000,
+              "height": 400,
+              "$type": "com.linkedin.common.VectorArtifact"
+            }
+          ],
+          "$type": "com.linkedin.common.VectorImage"
+        }
+      },
+      "universalName": "agiledcoders"
+    },
+    {
+      "entityUrn": "urn:li:fsd_company:15104820",
+      "name": "College of Engineering & Technology, Akola.",
+      "logo": {
+        "vectorImage": {
+          "digitalmediaAsset": "urn:li:digitalmediaAsset:C560BAQGO0YKK2NG1PA",
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.VectorImage"
+          ],
+          "rootUrl": "https://media.licdn.com/dms/image/v2/C560BAQGO0YKK2NG1PA/company-logo_",
+          "artifacts": [
+            {
+              "width": 200,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "200_200/company-logo_200_200/0/1630642182738/college_of_engineering__technology_akola_logo?e=1789603200&v=beta&t=TA7g3P-YbBnYB070pgKFEUncLFKdKnv0wQ-xnqbhTWk",
+              "expiresAt": 1789603200000,
+              "height": 200,
+              "$type": "com.linkedin.common.VectorArtifact"
+            },
+            {
+              "width": 100,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "100_100/company-logo_100_100/0/1630642182738/college_of_engineering__technology_akola_logo?e=1789603200&v=beta&t=tx4rJNjV5c2BzCKp4QgfESuOyQj_SGF5jZfOn-0UfSw",
+              "expiresAt": 1789603200000,
+              "height": 100,
+              "$type": "com.linkedin.common.VectorArtifact"
+            },
+            {
+              "width": 400,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "400_400/company-logo_400_400/0/1630642182738/college_of_engineering__technology_akola_logo?e=1789603200&v=beta&t=xqXBXC_r0EsPwmO6kCLGT1IjbBQ0FJoSZzSJCtxdwpA",
+              "expiresAt": 1789603200000,
+              "height": 400,
+              "$type": "com.linkedin.common.VectorArtifact"
+            }
+          ],
+          "$type": "com.linkedin.common.VectorImage"
+        }
+      },
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.organization.MiniCompany"
+      ],
+      "url": "https://www.linkedin.com/school/college-of-engineering-&-technology-akola./",
+      "$type": "com.linkedin.voyager.dash.organization.Company"
+    },
+    {
+      "industry": {
+        "*urn:li:fsd_industry:124": "urn:li:fsd_industry:124"
+      },
+      "industryUrns": [
+        "urn:li:fsd_industry:124"
+      ],
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.LinkablePositionCompany"
+      ],
+      "url": "https://www.linkedin.com/company/lazy-monk-labs/",
+      "$type": "com.linkedin.voyager.dash.organization.Company",
+      "employeeCountRange": {
+        "start": 0,
+        "end": 1,
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.IntegerRange"
+        ],
+        "$type": "com.linkedin.common.IntegerRange"
+      },
+      "entityUrn": "urn:li:fsd_company:109458672",
+      "name": "Lazy Monk Labs",
+      "logo": {
+        "vectorImage": {
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.VectorImageOnlyRootUrlAndAttribution"
+          ],
+          "rootUrl": "https://media.licdn.com/dms/image/v2/D4D0BAQG0no1GR-AoaQ/company-logo_",
+          "artifacts": [
+            {
+              "width": 100,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "100_100/B4DZn.rYTiJUAQ-/0/1760914412704/lazy_monk_labs_logo?e=1789603200&v=beta&t=_RUVZKcgcqSKaHcV2qGk-oyiheWndeThJHYLIYbVOy8",
+              "expiresAt": 1789603200000,
+              "height": 100,
+              "$type": "com.linkedin.common.VectorArtifact"
+            },
+            {
+              "width": 400,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "400_400/B4DZn.rYTiJUAY-/0/1760914412704/lazy_monk_labs_logo?e=1789603200&v=beta&t=_Rrtx6xgb8tORte6gexP8u3kj1JRz0sw_-ymT_1YLNk",
+              "expiresAt": 1789603200000,
+              "height": 400,
+              "$type": "com.linkedin.common.VectorArtifact"
+            },
+            {
+              "width": 200,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "200_200/B4DZn.rYTiJUAI-/0/1760914412704/lazy_monk_labs_logo?e=1789603200&v=beta&t=wSo4GnCCm-JKeQbvEyyREVauF3whHOOvcU8od_2JRqE",
+              "expiresAt": 1789603200000,
+              "height": 200,
+              "$type": "com.linkedin.common.VectorArtifact"
+            }
+          ],
+          "$type": "com.linkedin.common.VectorImage"
+        }
+      },
+      "universalName": "lazy-monk-labs"
+    },
+    {
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.LinkableMiniCompany"
+      ],
+      "url": "https://www.linkedin.com/company/100xdevs/",
+      "$type": "com.linkedin.voyager.dash.organization.Company",
+      "entityUrn": "urn:li:fsd_company:102965693",
+      "name": "100xDevs",
+      "logo": {
+        "vectorImage": {
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.VectorImageOnlyRootUrlAndAttribution"
+          ],
+          "rootUrl": "https://media.licdn.com/dms/image/v2/D4D0BAQEKt1j7c9NOvA/company-logo_",
+          "artifacts": [
+            {
+              "width": 200,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "200_200/company-logo_200_200/0/1737036432985/100xdevs_logo?e=1789603200&v=beta&t=SJBlNb0FPs2664aOrB9hK19p2VG5IGm2uqUrSM47j5w",
+              "expiresAt": 1789603200000,
+              "height": 200,
+              "$type": "com.linkedin.common.VectorArtifact"
+            },
+            {
+              "width": 100,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "100_100/company-logo_100_100/0/1737036432985/100xdevs_logo?e=1789603200&v=beta&t=jQ_MBUv7cAA6ga4UCf3eU9oKRGydD_nFsCaZSXNVdAk",
+              "expiresAt": 1789603200000,
+              "height": 100,
+              "$type": "com.linkedin.common.VectorArtifact"
+            },
+            {
+              "width": 400,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "400_400/company-logo_400_400/0/1737036432985/100xdevs_logo?e=1789603200&v=beta&t=4DeAiif2VnsXyInUknSwUBjrj3axCd1PrSZU2lJlxSI",
+              "expiresAt": 1789603200000,
+              "height": 400,
+              "$type": "com.linkedin.common.VectorArtifact"
+            }
+          ],
+          "$type": "com.linkedin.common.VectorImage"
+        }
+      },
+      "universalName": "100xdevs"
+    },
+    {
+      "industry": {
+        "*urn:li:fsd_industry:100": "urn:li:fsd_industry:100"
+      },
+      "industryUrns": [
+        "urn:li:fsd_industry:100"
+      ],
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.LinkablePositionCompany"
+      ],
+      "url": "https://www.linkedin.com/company/coetaecell/",
+      "$type": "com.linkedin.voyager.dash.organization.Company",
+      "employeeCountRange": {
+        "start": 11,
+        "end": 50,
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.IntegerRange"
+        ],
+        "$type": "com.linkedin.common.IntegerRange"
+      },
+      "entityUrn": "urn:li:fsd_company:105089835",
+      "name": "COETA E-CELL",
+      "logo": {
+        "vectorImage": {
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.VectorImageOnlyRootUrlAndAttribution"
+          ],
+          "rootUrl": "https://media.licdn.com/dms/image/v2/D4D0BAQE4MvhOm59sNA/company-logo_",
+          "artifacts": [
+            {
+              "width": 400,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "400_400/B4DZhbJpKJGQAo-/0/1753875911877/e_cell_coeta_logo?e=1789603200&v=beta&t=Oh_wvZ-OqCtya49toBKfAlQeZiA45FSVERjeh8dN6bQ",
+              "expiresAt": 1789603200000,
+              "height": 400,
+              "$type": "com.linkedin.common.VectorArtifact"
+            },
+            {
+              "width": 100,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "100_100/B4DZhbJpKJGQAg-/0/1753875911877/e_cell_coeta_logo?e=1789603200&v=beta&t=9lusD_q_bXvDCJn5N-EVNhwIYngAEAlKUKhMJtgnX-s",
+              "expiresAt": 1789603200000,
+              "height": 100,
+              "$type": "com.linkedin.common.VectorArtifact"
+            },
+            {
+              "width": 200,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "200_200/B4DZhbJpKJGQAY-/0/1753875911877/e_cell_coeta_logo?e=1789603200&v=beta&t=PfithFoZ9zigx8XKMgl0rBkSXCXtyDoDBX7ZjDWGVh4",
+              "expiresAt": 1789603200000,
+              "height": 200,
+              "$type": "com.linkedin.common.VectorArtifact"
+            }
+          ],
+          "$type": "com.linkedin.common.VectorImage"
+        }
+      },
+      "universalName": "coetaecell"
+    },
+    {
+      "industry": {
+        "*urn:li:fsd_industry:100": "urn:li:fsd_industry:100"
+      },
+      "industryUrns": [
+        "urn:li:fsd_industry:100"
+      ],
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.identity.profile.LinkablePositionCompany"
+      ],
+      "url": "https://www.linkedin.com/company/nirmanforyouth/",
+      "$type": "com.linkedin.voyager.dash.organization.Company",
+      "employeeCountRange": {
+        "start": 2,
+        "end": 10,
+        "$recipeTypes": [
+          "com.linkedin.voyager.dash.deco.common.IntegerRange"
+        ],
+        "$type": "com.linkedin.common.IntegerRange"
+      },
+      "entityUrn": "urn:li:fsd_company:79772818",
+      "name": "NIRMAN for Youth I Youth Purpose & Flourishing Programme",
+      "logo": {
+        "vectorImage": {
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.VectorImageOnlyRootUrlAndAttribution"
+          ],
+          "rootUrl": "https://media.licdn.com/dms/image/v2/C4E0BAQHUANUwmxFFrg/company-logo_",
+          "artifacts": [
+            {
+              "width": 200,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "200_200/company-logo_200_200/0/1630641465005?e=1789603200&v=beta&t=VopYJSJGQZ9w_4l-Aj7f6lGcYMffBKOp0ULFVHGxbDw",
+              "expiresAt": 1789603200000,
+              "height": 200,
+              "$type": "com.linkedin.common.VectorArtifact"
+            },
+            {
+              "width": 100,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "100_100-alternative/company-logo_100_100-alternative/0/1630641464996?e=1789603200&v=beta&t=iCDI26W_LoFKGpJImXrnDlogPv7Mr5QvBH2QeL6qdBg",
+              "expiresAt": 1789603200000,
+              "height": 100,
+              "$type": "com.linkedin.common.VectorArtifact"
+            },
+            {
+              "width": 400,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "400_400/company-logo_400_400/0/1630641465005?e=1789603200&v=beta&t=fbA0T6Vw_9UEsPqrE6iyJbIqg-D3UN0GDGizkHaYIbg",
+              "expiresAt": 1789603200000,
+              "height": 400,
+              "$type": "com.linkedin.common.VectorArtifact"
+            },
+            {
+              "width": 200,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "200_200-alternative/company-logo_200_200-alternative/0/1630641464996?e=1789603200&v=beta&t=qgCLGfl3aDjVxui9PSvcBN0BU9vrF_bkqsm9AZ0vwJ8",
+              "expiresAt": 1789603200000,
+              "height": 200,
+              "$type": "com.linkedin.common.VectorArtifact"
+            },
+            {
+              "width": 100,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "100_100/company-logo_100_100/0/1630641465005?e=1789603200&v=beta&t=mYUvYvltPKyG2UUxUjjk3XsRMMfhjnSaZe1TuaGe-_s",
+              "expiresAt": 1789603200000,
+              "height": 100,
+              "$type": "com.linkedin.common.VectorArtifact"
+            },
+            {
+              "width": 400,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "400_400-alternative/company-logo_400_400-alternative/0/1630641464996?e=1789603200&v=beta&t=r-L9bu4k9xFhD6H6yHEao5vF-C8g_HmJKJWWO-QErYQ",
+              "expiresAt": 1789603200000,
+              "height": 400,
+              "$type": "com.linkedin.common.VectorArtifact"
+            }
+          ],
+          "$type": "com.linkedin.common.VectorImage"
+        }
+      },
+      "universalName": "nirmanforyouth"
+    },
+    {
+      "active": true,
+      "$recipeTypes": [
+        "com.linkedin.voyager.dash.deco.organization.MiniSchool"
+      ],
+      "url": "https://www.linkedin.com/school/college-of-engineering-&-technology-akola./",
+      "$type": "com.linkedin.voyager.dash.organization.School",
+      "entityUrn": "urn:li:fsd_school:203084",
+      "name": "College of Engineering & Technology, Akola.",
+      "logo": {
+        "vectorImage": {
+          "digitalmediaAsset": "urn:li:digitalmediaAsset:C560BAQGO0YKK2NG1PA",
+          "$recipeTypes": [
+            "com.linkedin.voyager.dash.deco.common.VectorImage"
+          ],
+          "rootUrl": "https://media.licdn.com/dms/image/v2/C560BAQGO0YKK2NG1PA/company-logo_",
+          "artifacts": [
+            {
+              "width": 200,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "200_200/company-logo_200_200/0/1630642182738/college_of_engineering__technology_akola_logo?e=1789603200&v=beta&t=TA7g3P-YbBnYB070pgKFEUncLFKdKnv0wQ-xnqbhTWk",
+              "expiresAt": 1789603200000,
+              "height": 200,
+              "$type": "com.linkedin.common.VectorArtifact"
+            },
+            {
+              "width": 100,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "100_100/company-logo_100_100/0/1630642182738/college_of_engineering__technology_akola_logo?e=1789603200&v=beta&t=tx4rJNjV5c2BzCKp4QgfESuOyQj_SGF5jZfOn-0UfSw",
+              "expiresAt": 1789603200000,
+              "height": 100,
+              "$type": "com.linkedin.common.VectorArtifact"
+            },
+            {
+              "width": 400,
+              "$recipeTypes": [
+                "com.linkedin.voyager.dash.deco.common.VectorArtifact"
+              ],
+              "fileIdentifyingUrlPathSegment": "400_400/company-logo_400_400/0/1630642182738/college_of_engineering__technology_akola_logo?e=1789603200&v=beta&t=xqXBXC_r0EsPwmO6kCLGT1IjbBQ0FJoSZzSJCtxdwpA",
+              "expiresAt": 1789603200000,
+              "height": 400,
+              "$type": "com.linkedin.common.VectorArtifact"
+            }
+          ],
+          "$type": "com.linkedin.common.VectorImage"
+        }
+      }
+    }
+  ]
+}

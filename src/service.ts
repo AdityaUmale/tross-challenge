@@ -73,7 +73,6 @@ export class ProfileService {
   describe() {
     return {
       cacheEntries: this.cache.size,
-      cachedProfiles: this.cache.describe(),
       cacheTtlSeconds: Math.round(this.config.cacheTtlMs / 1000),
       pool: this.pool.describe(),
     };

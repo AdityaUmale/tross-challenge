@@ -72,6 +72,11 @@ function deviceFormFactor(userAgent: string): 'DESKTOP' | 'MOBILE' | 'TABLET' {
   return 'DESKTOP';
 }
 
+/** Only linkedin.com and its subdomains may receive the session cookie. */
+export function isLinkedInHost(hostname: string): boolean {
+  return /(^|\.)linkedin\.com$/i.test(hostname);
+}
+
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 /** Exponential backoff with jitter, so retries from parallel calls do not align. */
@@ -170,7 +175,16 @@ export class VoyagerClient {
               'The li_at value is no longer valid — sign in again in a browser, clear any security checkpoint, and copy a fresh cookie.',
           );
         }
-        url = new URL(location, url).toString();
+        const next = new URL(location, url);
+        // Every hop re-sends li_at, so a redirect off linkedin.com would hand
+        // the session cookie to whatever host the Location header named.
+        if (!isLinkedInHost(next.hostname)) {
+          throw new UpstreamError('LinkedIn redirected off-site; refusing to forward session cookies.', {
+            path,
+            host: next.hostname,
+          });
+        }
+        url = next.toString();
         continue;
       }
 

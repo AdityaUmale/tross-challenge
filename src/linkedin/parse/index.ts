@@ -194,13 +194,20 @@ function readIndustry(profile: AnyRecord): string | null {
  */
 function readFlag(profile: AnyRecord, topCard: AnyRecord | null, kind: 'openToWork' | 'hiring'): boolean {
   const needle = kind === 'openToWork' ? 'OPEN_TO_WORK' : 'HIRING';
+
   for (const source of [profile, topCard]) {
     if (!source) continue;
     if (source[kind] === true) return true;
-    const frame = source['profilePictureFrameType'] ?? source['frameType'];
-    if (typeof frame === 'string' && frame.toUpperCase().includes(needle)) return true;
-    const serialized = JSON.stringify(source['memberBadges'] ?? source['profilePicture'] ?? '');
-    if (serialized.toUpperCase().includes(needle)) return true;
+
+    // The badge is expressed as a photo frame type, e.g.
+    // PHOTO_FRAME_TYPE_OPEN_TO_WORK, not as a boolean.
+    for (const key of ['profilePictureFrameType', 'frameType', 'memberBadgeType']) {
+      const value = source[key];
+      if (typeof value === 'string' && value.toUpperCase().includes(needle)) return true;
+    }
+
+    const badges = record(source['memberBadges']);
+    if (badges?.[kind] === true) return true;
   }
   return false;
 }
@@ -232,5 +239,5 @@ function hydrateElements(payload: NormalizedPayload): AnyRecord[] {
   const roots = graph.rootElements();
   if (roots.length) return roots.map((e) => graph.hydrate<AnyRecord>(e));
   // Fall back to every skill-shaped entity present.
-  return graph.ofTypeSuffix('.ProfileSkill').map((e) => graph.hydrate<AnyRecord>(e));
+  return graph.ofTypeSuffix('.Skill').map((e) => graph.hydrate<AnyRecord>(e));
 }

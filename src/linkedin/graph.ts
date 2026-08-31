@@ -26,6 +26,7 @@ export interface NormalizedPayload {
 }
 
 const DEFAULT_MAX_DEPTH = 12;
+const UNSAFE_KEYS = new Set(['__proto__', 'constructor', 'prototype']);
 
 function isRecord(v: unknown): v is AnyRecord {
   return typeof v === 'object' && v !== null && !Array.isArray(v);
@@ -151,6 +152,9 @@ export class EntityGraph {
     const out: AnyRecord = {};
     for (const [key, raw] of Object.entries(value)) {
       if (key === '$recipeTypes' || key === '$anti_abuse_metadata') continue;
+      // Keys come from an upstream document we do not control, and assigning
+      // `out['__proto__']` by bracket notation invokes the prototype setter.
+      if (UNSAFE_KEYS.has(key) || UNSAFE_KEYS.has(key.slice(1))) continue;
 
       if (key.startsWith('*')) {
         // A pointer to a paged collection is more useful as a plain array.

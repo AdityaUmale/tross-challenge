@@ -11,6 +11,7 @@ interface ProfileQuery {
   url: string;
   fresh?: boolean;
   raw?: boolean;
+  extras?: boolean;
 }
 
 interface Options extends FastifyPluginOptions {
@@ -40,8 +41,12 @@ export async function profileRoutes(app: FastifyInstance, opts: Options): Promis
       schema: { ...shared, querystring: profileQuerystringSchema },
     },
     async (request) => {
-      const { url, fresh, raw } = request.query;
-      return service.getProfile(url, { fresh: Boolean(fresh), raw: Boolean(raw) });
+      const { url, fresh, raw, extras } = request.query;
+      return service.getProfile(url, {
+        fresh: Boolean(fresh),
+        raw: Boolean(raw),
+        extras: Boolean(extras),
+      });
     },
   );
 
@@ -53,8 +58,12 @@ export async function profileRoutes(app: FastifyInstance, opts: Options): Promis
       schema: { ...shared, body: profileBodySchema },
     },
     async (request) => {
-      const { url, fresh, raw } = request.body;
-      return service.getProfile(url, { fresh: Boolean(fresh), raw: Boolean(raw) });
+      const { url, fresh, raw, extras } = request.body;
+      return service.getProfile(url, {
+        fresh: Boolean(fresh),
+        raw: Boolean(raw),
+        extras: Boolean(extras),
+      });
     },
   );
 }

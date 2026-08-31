@@ -40,6 +40,26 @@ export function applySetCookies(jar: CookieJar, setCookies: string[]): void {
   }
 }
 
+/**
+ * Parses a Cookie header copied from a real request, e.g.
+ * `li_at=AQED…; JSESSIONID="ajax:123"; bcookie="v=2&…"; lidc="b=…"`.
+ *
+ * Preferred over supplying `li_at` alone: the browser's own jar carries
+ * bcookie, bscookie, lidc and liap, which is what a logged-in client looks
+ * like, and it removes the need to synthesise a session with an extra request.
+ */
+export function parseCookieHeader(header: string): CookieJar {
+  const jar: CookieJar = new Map();
+  for (const part of header.split(';')) {
+    const eq = part.indexOf('=');
+    if (eq <= 0) continue;
+    const name = part.slice(0, eq).trim();
+    const value = part.slice(eq + 1).trim();
+    if (name && value) jar.set(name, value);
+  }
+  return jar;
+}
+
 /** `"ajax:1234"` -> `ajax:1234`. The header must not carry the quotes. */
 /** A JSESSIONID in LinkedIn's own format, for the double-submit CSRF check. */
 function mintJsessionId(): string {
@@ -69,7 +89,12 @@ export class LinkedInSession {
     private readonly timeoutMs: number,
   ) {
     this.id = id;
-    this.jar.set('li_at', credentials.liAt);
+
+    if (credentials.cookieHeader) {
+      for (const [k, v] of parseCookieHeader(credentials.cookieHeader)) this.jar.set(k, v);
+    }
+    if (credentials.liAt) this.jar.set('li_at', credentials.liAt);
+
     if (credentials.jsessionId) {
       const quoted = /^".*"$/.test(credentials.jsessionId)
         ? credentials.jsessionId
@@ -132,10 +157,15 @@ export class LinkedInSession {
    * satisfies the CSRF check.
    */
   private async bootstrap(): Promise<void> {
-    try {
-      await this.requestSessionCookies();
-    } catch {
-      // A failed warm-up is not fatal; li_at still carries the authentication.
+    // A pasted browser jar already carries a server-issued JSESSIONID, so
+    // there is nothing to warm up. Making the request anyway would be an extra
+    // non-browser call against the session for no gain.
+    if (!this.jar.has('JSESSIONID')) {
+      try {
+        await this.requestSessionCookies();
+      } catch {
+        // Not fatal; li_at still carries the authentication.
+      }
     }
 
     let jsessionId = this.jar.get('JSESSIONID');

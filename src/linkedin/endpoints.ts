@@ -155,6 +155,7 @@ async function fetchWithLadder(
 export async function fetchProfileBundle(
   client: VoyagerClient,
   identifier: ProfileIdentifier,
+  options: { extras?: boolean } = {},
 ): Promise<ProfileBundle> {
   const cfg = loadEndpointConfig();
   const warnings: string[] = [];
@@ -174,23 +175,33 @@ export async function fetchProfileBundle(
 
   const bundle: ProfileBundle = { full, skillPages: [], warnings, source: `voyager-dash:${decoration}` };
 
+  // One request per profile by default.
+  //
+  // LinkedIn scores a session on how many identity-graph calls it makes and how
+  // fast. Fanning out to the top card and the skills pages tripled the request
+  // count for two fields the full-profile decoration does not carry anyway
+  // (follower counts, and endorsement counts, which this projection omits), and
+  // it was enough to get sessions invalidated after a handful of lookups.
+  //
+  // The extras are available behind ?extras=true for callers who want them and
+  // accept the risk to the session.
+  if (!options.extras) return bundle;
+
   const profileUrn = typeof profile['entityUrn'] === 'string' ? profile['entityUrn'] : null;
 
-  const [topCardResult, skillsResult] = await Promise.allSettled([
-    fetchWithLadder(client, identifier, cfg.topCard, cfg.topCardFallbacks),
-    profileUrn ? fetchAllSkills(client, profileUrn, cfg) : Promise.resolve([]),
-  ]);
-
-  if (topCardResult.status === 'fulfilled') {
-    bundle.topCard = topCardResult.value.payload;
-  } else {
-    warnings.push(`top card unavailable: ${reason(topCardResult.reason)}`);
+  try {
+    const topCard = await fetchWithLadder(client, identifier, cfg.topCard, cfg.topCardFallbacks);
+    bundle.topCard = topCard.payload;
+  } catch (err) {
+    warnings.push(`top card unavailable: ${reason(err)}`);
   }
 
-  if (skillsResult.status === 'fulfilled') {
-    bundle.skillPages = skillsResult.value;
-  } else {
-    warnings.push(`skill paging failed: ${reason(skillsResult.reason)}`);
+  if (profileUrn) {
+    try {
+      bundle.skillPages = await fetchAllSkills(client, profileUrn, cfg);
+    } catch (err) {
+      warnings.push(`skill paging failed: ${reason(err)}`);
+    }
   }
 
   return bundle;

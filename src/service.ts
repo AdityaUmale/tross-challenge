@@ -12,6 +12,11 @@ export interface FetchOptions {
   fresh?: boolean;
   /** Attach the raw Voyager payload to the response. */
   raw?: boolean;
+  /**
+   * Also fetch the top card and page the skills. Costs two or more extra
+   * authenticated requests, which measurably shortens session lifetime.
+   */
+  extras?: boolean;
 }
 
 /**
@@ -45,7 +50,7 @@ export class ProfileService {
     }
 
     const startedAt = Date.now();
-    const bundle = await fetchProfileBundle(this.client, identifier);
+    const bundle = await fetchProfileBundle(this.client, identifier, { extras: options.extras ?? false });
     const response = buildProfileResponse(identifier, bundle, {
       cached: false,
       elapsedMs: Date.now() - startedAt,

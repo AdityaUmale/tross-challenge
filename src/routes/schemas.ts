@@ -149,6 +149,12 @@ export const profileQuerystringSchema = {
     url: { type: 'string', minLength: 1, description: urlDescription, examples: ['https://www.linkedin.com/in/williamhgates'] },
     fresh: { type: 'boolean', default: false, description: 'Bypass the cache and refetch from LinkedIn.' },
     raw: { type: 'boolean', default: false, description: 'Include the raw Voyager payload alongside the parsed profile.' },
+    extras: {
+      type: 'boolean',
+      default: false,
+      description:
+        'Also fetch the top card and page the skills. Costs extra authenticated requests and shortens session lifetime.',
+    },
   },
 } as const;
 
@@ -159,6 +165,7 @@ export const profileBodySchema = {
     url: { type: 'string', minLength: 1, description: urlDescription },
     fresh: { type: 'boolean', default: false },
     raw: { type: 'boolean', default: false },
+    extras: { type: 'boolean', default: false },
   },
 } as const;
 

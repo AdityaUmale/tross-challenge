@@ -31,11 +31,26 @@ function list(name: string): string[] {
  * li_at when absent, which also keeps the lidc datacenter cookie fresh.
  */
 export interface SessionCredentials {
-  liAt: string;
+  liAt?: string;
   jsessionId?: string;
+  /**
+   * A complete Cookie header copied from a real Voyager request. Preferred
+   * over `liAt`: it carries the browser's whole jar and needs no bootstrap.
+   */
+  cookieHeader?: string;
 }
 
 function buildSessions(): SessionCredentials[] {
+  // A pasted Cookie header wins: it is the closest thing to what a browser
+  // actually sends. Semicolons separate cookies, so these are newline-separated.
+  const cookieHeaders = (process.env['LI_COOKIE'] ?? '')
+    .split('\n')
+    .map((s) => s.trim())
+    .filter(Boolean);
+  if (cookieHeaders.length) {
+    return cookieHeaders.map((cookieHeader) => ({ cookieHeader }));
+  }
+
   const liAts = list('LI_AT');
   const jsessions = list('LI_JSESSIONID');
 
@@ -63,6 +78,9 @@ export interface Config {
   sessions: SessionCredentials[];
   userAgent: string;
   clientVersion: string;
+  /** IANA zone reported in x-li-track. Should match the machine that owns the cookie. */
+  timezone: string;
+  timezoneOffset: number;
   maxConcurrency: number;
   maxRetries: number;
   timeoutMs: number;
@@ -86,6 +104,9 @@ export function loadConfig(): Config {
       'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
     ),
     clientVersion: str('LI_CLIENT_VERSION', '1.13.36270'),
+    // A browser reports its real zone. UTC with a desktop UA reads as a server.
+    timezone: str('LI_TIMEZONE', Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC'),
+    timezoneOffset: int('LI_TIMEZONE_OFFSET', -new Date().getTimezoneOffset() / 60),
     maxConcurrency: int('LI_MAX_CONCURRENCY', 2),
     maxRetries: int('LI_MAX_RETRIES', 3),
     timeoutMs: int('LI_TIMEOUT_MS', 20_000),

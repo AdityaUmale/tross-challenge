@@ -18,6 +18,8 @@ export interface RequestContext {
   identifier?: string;
   /** Sent as Referer; LinkedIn is likelier to serve a request that looks navigational. */
   referer?: string;
+  /** x-li-page-instance, which the real client tags every Voyager call with. */
+  pageInstance?: string;
 }
 
 /**
@@ -29,9 +31,13 @@ export interface RequestContext {
  * `{data, included[]}` graph that graph.ts indexes.
  */
 export function voyagerHeaders(csrfToken: string, config: Config, ctx: RequestContext = {}) {
-  return {
+  const ua = config.userAgent;
+  const headers: Record<string, string> = {
     accept: 'application/vnd.linkedin.normalized+json+2.1',
     'accept-language': 'en-US,en;q=0.9',
+    // Node decompresses these transparently. Announcing nothing is itself
+    // unusual, since every browser advertises compression.
+    'accept-encoding': 'gzip, deflate, br',
     'csrf-token': csrfToken,
     'x-restli-protocol-version': '2.0.0',
     'x-li-lang': 'en_US',
@@ -39,26 +45,56 @@ export function voyagerHeaders(csrfToken: string, config: Config, ctx: RequestCo
       clientVersion: config.clientVersion,
       mpVersion: config.clientVersion,
       osName: 'web',
-      timezoneOffset: 0,
-      timezone: 'UTC',
-      deviceFormFactor: deviceFormFactor(config.userAgent),
+      timezoneOffset: config.timezoneOffset,
+      timezone: config.timezone,
+      deviceFormFactor: deviceFormFactor(ua),
       mpName: 'voyager-web',
     }),
-    'user-agent': config.userAgent,
+    // A Voyager call is an XHR issued by a page on the same origin. Saying so
+    // costs nothing and its absence is conspicuous.
+    'sec-fetch-site': 'same-origin',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-dest': 'empty',
+    'user-agent': ua,
+    // Default to the profile being requested rather than the feed: the real
+    // client issues this call from the profile page.
     referer: ctx.referer ?? 'https://www.linkedin.com/feed/',
-  } satisfies Record<string, string>;
+  };
+
+  const clientHints = secChUa(ua);
+  if (clientHints) {
+    headers['sec-ch-ua'] = clientHints.brands;
+    headers['sec-ch-ua-mobile'] = clientHints.mobile;
+    headers['sec-ch-ua-platform'] = clientHints.platform;
+  }
+  if (ctx.pageInstance) headers['x-li-page-instance'] = ctx.pageInstance;
+
+  return headers;
 }
 
-
 /**
- * True when a response deletes the session cookie. LinkedIn signals an
- * invalidated session this way — a 302 carrying `li_at=delete me; Max-Age=0` —
- * rather than with a 401.
+ * Client hints derived from the User-Agent, so the two agree. A browser sends
+ * these on every request; a mismatch between them and the UA is a cheap tell.
  */
-function clearsSessionCookie(res: Response): boolean {
-  return res.headers
-    .getSetCookie()
-    .some((c) => /^li_at=/i.test(c) && /Max-Age=0|Expires=Thu, 01[- ]Jan[- ]1970/i.test(c));
+function secChUa(userAgent: string): { brands: string; mobile: string; platform: string } | null {
+  const version = /Chrome\/(\d+)/.exec(userAgent)?.[1];
+  if (!version) return null;
+
+  const platform = /Macintosh|Mac OS X/i.test(userAgent)
+    ? '"macOS"'
+    : /Windows/i.test(userAgent)
+      ? '"Windows"'
+      : /Android/i.test(userAgent)
+        ? '"Android"'
+        : /Linux/i.test(userAgent)
+          ? '"Linux"'
+          : '"Unknown"';
+
+  return {
+    brands: `"Chromium";v="${version}", "Google Chrome";v="${version}", "Not?A_Brand";v="99"`,
+    mobile: /\bMobi|\bAndroid\b/i.test(userAgent) ? '?1' : '?0',
+    platform,
+  };
 }
 
 /**
@@ -75,6 +111,17 @@ function deviceFormFactor(userAgent: string): 'DESKTOP' | 'MOBILE' | 'TABLET' {
 /** Only linkedin.com and its subdomains may receive the session cookie. */
 export function isLinkedInHost(hostname: string): boolean {
   return /(^|\.)linkedin\.com$/i.test(hostname);
+}
+
+/**
+ * True when a response deletes the session cookie. LinkedIn signals an
+ * invalidated session this way — a 302 carrying `li_at=delete me; Max-Age=0` —
+ * rather than with a 401.
+ */
+function clearsSessionCookie(res: Response): boolean {
+  return res.headers
+    .getSetCookie()
+    .some((c) => /^li_at=/i.test(c) && /Max-Age=0|Expires=Thu, 01[- ]Jan[- ]1970/i.test(c));
 }
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));

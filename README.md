@@ -20,6 +20,7 @@ Interactive API documentation is at `/docs`.
 - [API reference](#api-reference)
 - [Approach](#approach)
 - [Limitations](#limitations)
+- [Security](#security)
 - [Verify it locally](#verify-it-locally)
 - [Deploy](#deploy)
 
@@ -116,7 +117,10 @@ token from `li_at` on first use. For why that matters, see
 ## API reference
 
 All profile endpoints require an API key when `API_KEYS` is set. Pass it as
-either `Authorization: Bearer KEY` or `x-api-key: KEY`.
+either `Authorization: Bearer KEY` or `x-api-key: KEY`. The key for the hosted
+instance is supplied with the submission rather than committed here.
+
+`/health` and `/docs` need no key.
 
 ### Get a profile
 
@@ -162,7 +166,13 @@ Company, school, job, post, and Sales Navigator URLs return `400`.
     "fullName": "Ada Lovelace",
     "headline": "Principal Engineer at Analytical Engines",
     "about": "Mathematician. I write about compilers…",
-    "location": { "display": "London, England, United Kingdom", "country": null, "countryCode": null },
+    "location": {
+      "display": "London, England, United Kingdom",
+      "country": null,
+      "countryCode": "GB",
+      "postalCode": null,
+      "geoUrn": "urn:li:fsd_geo:102257491"
+    },
     "industry": "Software Development",
     "pronouns": null,
     "isOpenToWork": true,
@@ -199,7 +209,7 @@ Company, school, job, post, and Sales Navigator URLs return `400`.
     }
   ],
   "education": [],
-  "skills": [{ "name": "TypeScript", "endorsementCount": 42 }],
+  "skills": [{ "name": "TypeScript", "endorsementCount": null }],
   "certifications": [],
   "languages": [{ "name": "English", "proficiency": "Native or bilingual" }],
   "volunteering": [],
@@ -346,23 +356,60 @@ Every entity is addressable by `entityUrn`, and a field whose name starts with
 `*` is a pointer rather than a value. `src/linkedin/graph.ts` indexes `included`
 by URN and walks those pointers, so the parsers work with plain objects.
 
-Two details in that resolver are easy to get wrong:
+Three details in that resolver are easy to get wrong, and all three cost real
+debugging time here:
 
-- Only `*`-prefixed keys are pointers. A plain string stays a string even when
-  it looks like a URN — otherwise `entityUrn` resolves to the entity it names,
-  and the ID disappears.
+- Only `*`-prefixed keys are pointers. A plain string stays a string even when it
+  looks like a URN — otherwise `entityUrn` resolves to the entity it names and
+  the ID disappears.
 - The graph contains cycles. A position points at a company, whose entity points
   back at people. The resolver tracks the current branch and stops on a revisit.
+- Follow pointers; don't scan by type. `included` carries several `Geo` entities,
+  and only the one the profile points at has a name. Scanning for the first `Geo`
+  returns an empty stub and the location silently disappears.
 
-### Session bootstrap
+Keys are also filtered: `included` is an untrusted document, and assigning
+`out['__proto__']` by bracket notation would invoke the prototype setter.
+
+### Session bootstrap, and why CSRF is not a blocker
 
 Voyager needs both `li_at` and a `JSESSIONID`, but only `li_at` has to be a
-secret. On first use the client requests a LinkedIn page with `li_at` alone,
-reads `JSESSIONID` from `Set-Cookie`, and derives the CSRF token from it.
+secret. On first use the client requests a LinkedIn page with `li_at` alone and
+reads `JSESSIONID` from `Set-Cookie`.
 
-This means one secret to manage instead of two, and a CSRF token that can't go
-stale. It also keeps the `lidc` datacenter affinity cookie current, which
-reduces how often LinkedIn answers with HTTP 999.
+That request doesn't always set one. Rather than fail, the client mints its own:
+LinkedIn validates CSRF by **double submission**, meaning the `csrf-token` header
+only has to match the `JSESSIONID` cookie sent with it. The value doesn't have to
+be server-issued. Authentication comes from `li_at`; the token satisfies the CSRF
+check and nothing more.
+
+The warm-up request is still worth making, because it refreshes the `lidc`
+datacenter affinity cookie, which reduces HTTP 999 responses.
+
+### Three things that all look like a redirect
+
+Voyager answers with 3xx in situations that need opposite handling, so redirects
+are followed manually rather than by the HTTP client:
+
+| Response | Meaning | Handling |
+|---|---|---|
+| 302 to `/checkpoint/` or `/uas/login` | The account needs verification in a browser | Fail with `AUTH_EXPIRED` |
+| 302 to the same URL, with `li_at` expired via `Max-Age=0` and `clear-site-data` | LinkedIn has invalidated the session | Fail with `AUTH_EXPIRED` |
+| 302 carrying a new `lidc` cookie | Datacenter affinity | Replay with the updated jar |
+
+An invalid session is a redirect, not a 401. Following it naively loops forever,
+which is what the third case looks like until you inspect the `Set-Cookie`
+headers. Redirects are also confined to `linkedin.com`: every hop resends
+`li_at`, so an off-site `Location` would hand the session cookie to that host.
+
+### The client fingerprint has to be self-consistent
+
+`x-li-track` announces a form factor, and it must agree with the `User-Agent`.
+Claiming `DESKTOP` while sending a mobile UA is a contradictory client, and
+LinkedIn invalidates sessions that look automated. The form factor is derived
+from `LI_USER_AGENT` rather than hardcoded.
+
+Set `LI_USER_AGENT` to the user agent of the browser that created the cookie.
 
 ### Staying unblocked
 
@@ -379,25 +426,46 @@ The client keeps the request pattern conservative:
 
 ## Limitations
 
-- **Decoration versions drift.** When LinkedIn bumps a projection version, the
-  configured decoration can start returning `400`. The client tries the adjacent
-  versions in `config/endpoints.json` first, and reports `SCHEMA_DRIFT` if every
-  one fails. Recapture a HAR and rerun `npm run har` to fix it.
-- **The cookie expires.** `li_at` lasts weeks to months, and is revoked when the
-  account changes its password or signs out everywhere. `/health` reports `503`
-  when this happens.
-- **Visibility depends on the account.** LinkedIn shows less of an
-  out-of-network or private profile. Those sections come back as `[]`, not as an
-  error. The data returned is what the authenticated session can see, which is
-  not always what the profile owner sees.
-- **Contact details are excluded.** Email addresses and phone numbers are not
-  requested, even where LinkedIn exposes them.
+- **Endorsement counts aren't available.** The `Skill` entity in this projection
+  carries a name and nothing else, so `endorsementCount` is always `null`.
+  Retrieving counts needs a separate endpoint that this service doesn't call.
+- **The cookie is the weak point.** `li_at` lasts weeks to months, but LinkedIn
+  invalidates it early if traffic looks automated — bursts of requests, or a
+  `User-Agent` that disagrees with the announced client. `/health` returns `503`
+  when this happens, so the failure is legible rather than a mystery. Refresh the
+  cookie and redeploy.
 - **Datacenter IP addresses attract more blocking.** Expect a higher HTTP 999
-  rate from a hosted deployment than from a laptop.
+  rate from a hosted deployment than from a laptop. Warm the cache (see
+  [Deploy](#deploy)) so a temporary block doesn't stop the service returning data.
+- **Decoration versions drift.** When LinkedIn bumps a projection version, the
+  configured decoration starts returning `400`. The client tries the adjacent
+  versions in `config/endpoints.json` and reports `SCHEMA_DRIFT` if all fail.
+  Recapture a HAR and rerun `npm run har`.
+- **Visibility depends on the account.** LinkedIn shows less of an
+  out-of-network or private profile, and those sections return `[]` rather than
+  an error. A new account with no connections sees markedly less than an
+  established one.
+- **Contact details are excluded.** Email addresses and phone numbers are never
+  requested, even where LinkedIn exposes them.
 - **This is an unofficial API.** Voyager is undocumented, unversioned, and can
   change without notice. Using it is inconsistent with LinkedIn's terms of
   service. This project was built as a technical assignment, runs on its
   operator's own credentials, and is not intended for bulk collection.
+
+## Security
+
+- `li_at` is read from the environment only. It is never logged, never returned
+  in a response, and never written to the repository. `.env`, `*.har` files and
+  probe dumps are all excluded by `.gitignore`.
+- Redirects are confined to `linkedin.com`, because each hop resends the session
+  cookie.
+- Requests to the profile endpoint require an API key. The server refuses to
+  start in production without `API_KEYS`, since an unauthenticated proxy to a
+  LinkedIn session is not something to expose.
+- Input URLs are validated against `linkedin.com` before any request is made,
+  which keeps the `url` parameter from reaching arbitrary hosts.
+- Test fixtures are captured from public profiles with contact details, postal
+  codes and tracking identifiers stripped.
 
 ## Verify it locally
 
@@ -408,9 +476,11 @@ npm run typecheck
 npm test
 ```
 
-The suite covers the entity graph, including cycles and dangling pointers, URL
-parsing across the shapes people paste, image extraction, and the parsers
-against both a dense and a sparse profile.
+The suite covers the entity graph, including cycles, dangling pointers and
+prototype-polluting keys; URL parsing across the shapes people paste; image
+extraction; cache expiry, eviction and restart persistence; the redirect host
+allowlist; and the parsers against a sparse profile, a synthetic dense one, and
+a real captured Voyager payload in `tests/fixtures/real-profile-dash.json`.
 
 To check the HTTP surface without a LinkedIn cookie:
 
@@ -440,10 +510,27 @@ Set these variables in your host's secret store:
 | `API_KEYS` | Yes in production | Comma-separated. The server refuses to start in production without it. |
 | `LI_USER_AGENT` | Recommended | Match the browser that created the cookie. |
 | `LI_JSESSIONID` | No | Bootstrapped from `LI_AT`. |
+| `CACHE_FILE` | Recommended | Path for the cache snapshot, so warmed profiles survive a restart. |
 | `PORT` | No | Supplied by most hosts. Defaults to `8080`. |
 
 After deploying, check `/health`, then one known profile, then a nonexistent
 username, then a request with no API key.
+
+### Warm the cache
+
+Set `CACHE_FILE` so the cache survives a restart, then warm it:
+
+```bash
+npm run warm -- --remote https://your-host --key YOUR_KEY \
+  https://www.linkedin.com/in/williamhgates \
+  https://www.linkedin.com/in/satyanadella
+```
+
+Requests go out one at a time, eight seconds apart. Warmed profiles are then
+served from cache, which keeps a live LinkedIn call off the critical path and
+means a temporary block doesn't stop the service returning real data.
+`meta.cached` and `meta.fetchedAt` report this honestly, and `?fresh=true`
+bypasses the cache to exercise the live path.
 
 Don't load-test a deployment. Every uncached request uses a real LinkedIn
 session, and volume is what gets an account restricted.

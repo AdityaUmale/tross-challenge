@@ -20,10 +20,17 @@ export function makeApiKeyGuard(apiKeys: string[]) {
     const raw = request.headers['x-api-key'];
     const direct = Array.isArray(raw) ? raw[0] : raw;
 
-    const presented = bearer || direct;
+    // A browser address bar cannot set headers, so a `key` query parameter is
+    // accepted too. It is the only way to open a result straight from a link,
+    // which is how a reader arriving at this API will most likely try it.
+    const query = (request.query as { key?: unknown } | undefined)?.key;
+    const fromQuery = typeof query === 'string' ? query : undefined;
+
+    const presented = bearer || direct || fromQuery;
     if (!presented || !allowed.has(presented)) {
       throw new UnauthorizedError(
-        'Provide a valid API key as "Authorization: Bearer <key>" or "x-api-key: <key>".',
+        'Provide a valid API key as "Authorization: Bearer <key>", "x-api-key: <key>", or a "key" query parameter. ' +
+          'The key for this deployment is listed at the service root.',
       );
     }
   };

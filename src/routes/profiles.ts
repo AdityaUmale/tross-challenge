@@ -12,6 +12,8 @@ interface ProfileQuery {
   fresh?: boolean;
   raw?: boolean;
   extras?: boolean;
+  /** Accepted so a link can carry the key; consumed by the auth guard. */
+  key?: string;
 }
 
 interface Options extends FastifyPluginOptions {

@@ -42,12 +42,57 @@ export async function healthRoutes(app: FastifyInstance, opts: Options): Promise
     },
   );
 
-  app.get('/', { schema: { hide: true } }, async (_request, reply) =>
-    reply.send({
-      name: 'linkedin-profile-api',
-      docs: '/docs',
-      health: '/health',
-      profile: '/v1/profiles?url=https://www.linkedin.com/in/<username>',
-    }),
+  /**
+   * Landing page.
+   *
+   * The submission form takes only this URL, so everything a reader needs has
+   * to be reachable from here: the source, the interactive docs, a key that
+   * works, and a request they can copy.
+   */
+  app.get(
+    '/',
+    {
+      schema: {
+        tags: ['meta'],
+        summary: 'Service index: source, docs, and a working example',
+        response: { 200: { type: 'object', additionalProperties: true } },
+      },
+    },
+    async (request, reply) => {
+      // `host` carries the port; behind Render's proxy, trustProxy resolves
+      // both of these from the x-forwarded-* headers.
+      const host = request.headers.host ?? request.hostname;
+      const base = `${request.protocol}://${host}`;
+      const key = config.apiKeys[0];
+
+      return reply.send({
+        name: 'linkedin-profile-api',
+        description:
+          'Accepts a LinkedIn profile URL and returns the profile as structured JSON, ' +
+          'read from LinkedIn\'s internal Voyager API over plain HTTP. No browser, no HTML scraping.',
+        source: 'https://github.com/AdityaUmale/tross-challenge',
+        documentation: `${base}/docs`,
+        health: `${base}/health`,
+        endpoints: {
+          profile: 'GET /v1/profiles?url=<linkedin profile url>',
+          profilePost: 'POST /v1/profiles  {"url": "<linkedin profile url>"}',
+          health: 'GET /health',
+        },
+        authentication: key
+          ? {
+              note:
+                'Send the key as "x-api-key", "Authorization: Bearer <key>", or a "key" query parameter. ' +
+                'The query parameter exists so a link works straight from a browser. /health and /docs need no key.',
+              demoKey: key,
+            }
+          : { note: 'No key required on this deployment.' },
+        example: key
+          ? `curl -H 'x-api-key: ${key}' '${base}/v1/profiles?url=https://www.linkedin.com/in/williamhgates'`
+          : `curl '${base}/v1/profiles?url=https://www.linkedin.com/in/williamhgates'`,
+        tryInBrowser: key
+          ? `${base}/v1/profiles?url=https://www.linkedin.com/in/williamhgates&key=${key}`
+          : `${base}/v1/profiles?url=https://www.linkedin.com/in/williamhgates`,
+      });
+    },
   );
 }

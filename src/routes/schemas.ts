@@ -161,6 +161,10 @@ export const profileQuerystringSchema = {
       description:
         'Also fetch the top card and page the skills. Costs extra authenticated requests and shortens session lifetime.',
     },
+    key: {
+      type: 'string',
+      description: 'API key, for callers that cannot set headers such as a browser address bar.',
+    },
   },
 } as const;
 

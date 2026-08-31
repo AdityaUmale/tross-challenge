@@ -117,10 +117,15 @@ token from `li_at` on first use. For why that matters, see
 ## API reference
 
 All profile endpoints require an API key when `API_KEYS` is set. Pass it as
-either `Authorization: Bearer KEY` or `x-api-key: KEY`. The key for the hosted
-instance is supplied with the submission rather than committed here.
+`Authorization: Bearer KEY`, `x-api-key: KEY`, or a `key` query parameter. The
+query parameter exists because a browser address bar cannot set headers, so a
+link to a result works on its own.
 
-`/health` and `/docs` need no key.
+The key for the hosted deployment is published at the service root (`GET /`)
+along with a ready-to-run example, so the API is usable from its URL alone. It
+is not committed here.
+
+`/health`, `/docs` and `/` need no key.
 
 ### Get a profile
 

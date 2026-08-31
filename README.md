@@ -495,8 +495,9 @@ curl 'localhost:8080/v1/profiles?url=https://www.linkedin.com/in/williamhgates' 
 
 ## Deploy
 
-For step-by-step Hugging Face Spaces instructions, see
-[deploy/HUGGINGFACE.md](deploy/HUGGINGFACE.md).
+The service is a container and runs anywhere that takes a Dockerfile. For
+step-by-step instructions, see [deploy/RENDER.md](deploy/RENDER.md), or
+[deploy/HUGGINGFACE.md](deploy/HUGGINGFACE.md) for Hugging Face Spaces.
 
 Build and run the container:
 
@@ -515,6 +516,10 @@ Set these variables in your host's secret store:
 | `LI_JSESSIONID` | No | Bootstrapped from `LI_AT`. |
 | `CACHE_FILE` | Recommended | Path for the cache snapshot, so warmed profiles survive a restart. |
 | `PORT` | No | Supplied by most hosts. Defaults to `8080`. |
+
+Point the platform's health check at `/`, not `/health`. The health endpoint
+answers `503` when the LinkedIn cookie is dead, which is correct for a caller
+but makes a liveness probe restart a service that is running fine.
 
 After deploying, check `/health`, then one known profile, then a nonexistent
 username, then a request with no API key.

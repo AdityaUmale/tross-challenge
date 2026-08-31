@@ -1,0 +1,37 @@
+# Render Blueprint. Point Render at this repository and it provisions the
+# service with the settings below; the secret values are entered in the
+# dashboard rather than committed.
+services:
+  - type: web
+    name: linkedin-profile-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    region: oregon
+
+    # Deliberately "/" and not "/health". The health endpoint reports 503 when
+    # the LinkedIn cookie is dead, which is correct for a caller but would make
+    # Render treat the service as failed and restart it in a loop. "/" answers
+    # 200 whenever the process is up, which is what a liveness probe should ask.
+    healthCheckPath: /
+
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: LOG_LEVEL
+        value: info
+      # Free instances have no persistent disk, so the snapshot lives in /tmp
+      # and lasts as long as the instance stays awake.
+      - key: CACHE_FILE
+        value: /tmp/cache.json
+      - key: CACHE_TTL_SECONDS
+        value: "86400"
+      - key: LI_MAX_CONCURRENCY
+        value: "2"
+      # Set these in the dashboard: Environment > Add Environment Variable.
+      - key: LI_AT
+        sync: false
+      - key: LI_USER_AGENT
+        sync: false
+      - key: API_KEYS
+        sync: false
